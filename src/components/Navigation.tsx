@@ -1,28 +1,30 @@
 import { useState } from "react";
-import { Menu, X, ShoppingCart, User } from "lucide-react";
+import { Menu, X, ShoppingCart, User, Search } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import logoImage from "@/assets/logo.jpg";
 
 const Navigation = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   const navLinks = [
-    { name: "Home", href: "#" },
     { name: "Shop", href: "#shop" },
     { name: "How It Works", href: "#how-it-works" },
     { name: "Reviews", href: "#reviews" },
     { name: "FAQ", href: "#faq" },
+    { name: "Contact", href: "#contact" },
   ];
 
   return (
-    <nav className="bg-card/95 backdrop-blur-sm border-b border-border sticky top-0 z-50">
+    <nav className="bg-background border-b border-border sticky top-0 z-50">
       <div className="container">
         <div className="flex items-center justify-between h-16 lg:h-20">
           {/* Logo */}
-          <a href="#" className="flex items-center gap-2">
-            <div className="flex items-center">
-              <span className="text-2xl lg:text-3xl font-bold text-primary">Terra</span>
-              <span className="text-2xl lg:text-3xl font-bold text-foreground">Freeze</span>
-            </div>
+          <a href="#" className="flex items-center">
+            <img 
+              src={logoImage} 
+              alt="TerraFreeze" 
+              className="h-8 lg:h-10 w-auto"
+            />
           </a>
 
           {/* Desktop Navigation */}
@@ -31,7 +33,7 @@ const Navigation = () => {
               <a
                 key={link.name}
                 href={link.href}
-                className="text-nav-link hover:text-nav-link-hover font-medium transition-colors duration-200"
+                className="text-nav-link hover:text-nav-link-hover font-medium text-sm transition-colors duration-200"
               >
                 {link.name}
               </a>
@@ -39,7 +41,10 @@ const Navigation = () => {
           </div>
 
           {/* Right Side Actions */}
-          <div className="flex items-center gap-2 lg:gap-4">
+          <div className="flex items-center gap-2 lg:gap-3">
+            <button className="p-2 hover:bg-muted rounded-full transition-colors hidden sm:flex">
+              <Search className="h-5 w-5 text-foreground" />
+            </button>
             <button className="p-2 hover:bg-muted rounded-full transition-colors hidden sm:flex">
               <User className="h-5 w-5 text-foreground" />
             </button>
@@ -67,7 +72,7 @@ const Navigation = () => {
 
         {/* Mobile Navigation */}
         {isMobileMenuOpen && (
-          <div className="lg:hidden border-t border-border py-4 animate-slide-in">
+          <div className="lg:hidden border-t border-border py-4 animate-fade-in">
             <div className="flex flex-col gap-1">
               {navLinks.map((link) => (
                 <a
@@ -80,7 +85,7 @@ const Navigation = () => {
                 </a>
               ))}
               <div className="mt-4 px-4">
-                <Button variant="hero" className="w-full">
+                <Button className="w-full bg-accent hover:bg-accent/90 text-accent-foreground">
                   Shop Now
                 </Button>
               </div>
