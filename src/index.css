@@ -2,61 +2,63 @@
 @tailwind components;
 @tailwind utilities;
 
-/* TerraFreeze Design System - Cool, Professional Health/Wellness */
+/* TerraFreeze Design System - Blue/Grey/White/Black Professional */
 
 @layer base {
   :root {
-    /* Core brand colors - Icy blues */
-    --background: 40 33% 98%;
-    --foreground: 220 20% 15%;
+    /* Core brand colors - Clean whites and greys */
+    --background: 0 0% 100%;
+    --foreground: 220 15% 15%;
 
     --card: 0 0% 100%;
-    --card-foreground: 220 20% 15%;
+    --card-foreground: 220 15% 15%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 220 20% 15%;
+    --popover-foreground: 220 15% 15%;
 
-    /* Primary - Cool Teal/Cyan */
-    --primary: 187 72% 38%;
+    /* Primary - TerraFreeze Blue (from logo) */
+    --primary: 200 85% 45%;
     --primary-foreground: 0 0% 100%;
 
-    /* Secondary - Warm cream */
-    --secondary: 40 30% 94%;
-    --secondary-foreground: 220 20% 15%;
+    /* Secondary - Light grey/cream for contrast sections */
+    --secondary: 35 30% 94%;
+    --secondary-foreground: 220 15% 15%;
 
-    --muted: 40 20% 92%;
+    --muted: 220 10% 96%;
     --muted-foreground: 220 10% 45%;
 
-    /* Accent - Deep teal for emphasis */
-    --accent: 187 85% 28%;
+    /* Accent - Deep navy blue */
+    --accent: 210 50% 25%;
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 40 20% 88%;
-    --input: 40 20% 88%;
-    --ring: 187 72% 38%;
+    --border: 220 10% 90%;
+    --input: 220 10% 90%;
+    --ring: 200 85% 45%;
 
     --radius: 0.5rem;
 
     /* Custom TerraFreeze tokens */
-    --announcement-bg: 220 15% 15%;
+    --announcement-bg: 210 50% 20%;
     --announcement-foreground: 0 0% 100%;
     
-    --hero-gradient: linear-gradient(135deg, hsl(40 33% 98%) 0%, hsl(40 25% 95%) 50%, hsl(195 30% 95%) 100%);
+    /* Hero split backgrounds */
+    --hero-left: 0 0% 100%;
+    --hero-right: 35 30% 94%;
     
     --trust-badge-bg: 0 0% 100%;
-    --trust-badge-border: 40 20% 88%;
+    --trust-badge-border: 220 10% 88%;
     
-    --nav-link: 220 15% 35%;
-    --nav-link-hover: 187 72% 38%;
+    --nav-link: 220 10% 35%;
+    --nav-link-hover: 200 85% 45%;
 
     /* Shadows */
-    --shadow-sm: 0 1px 2px 0 hsl(220 20% 15% / 0.05);
-    --shadow-md: 0 4px 6px -1px hsl(220 20% 15% / 0.07), 0 2px 4px -2px hsl(220 20% 15% / 0.05);
-    --shadow-lg: 0 10px 15px -3px hsl(220 20% 15% / 0.08), 0 4px 6px -4px hsl(220 20% 15% / 0.05);
-    --shadow-xl: 0 20px 25px -5px hsl(220 20% 15% / 0.1), 0 8px 10px -6px hsl(220 20% 15% / 0.05);
+    --shadow-sm: 0 1px 2px 0 hsl(220 15% 15% / 0.05);
+    --shadow-md: 0 4px 6px -1px hsl(220 15% 15% / 0.07), 0 2px 4px -2px hsl(220 15% 15% / 0.05);
+    --shadow-lg: 0 10px 15px -3px hsl(220 15% 15% / 0.08), 0 4px 6px -4px hsl(220 15% 15% / 0.05);
+    --shadow-xl: 0 20px 25px -5px hsl(220 15% 15% / 0.1), 0 8px 10px -6px hsl(220 15% 15% / 0.05);
 
     /* Sidebar defaults */
     --sidebar-background: 0 0% 98%;
@@ -71,34 +73,34 @@
 
   .dark {
     --background: 220 20% 10%;
-    --foreground: 40 20% 95%;
+    --foreground: 0 0% 95%;
 
     --card: 220 20% 12%;
-    --card-foreground: 40 20% 95%;
+    --card-foreground: 0 0% 95%;
 
     --popover: 220 20% 12%;
-    --popover-foreground: 40 20% 95%;
+    --popover-foreground: 0 0% 95%;
 
-    --primary: 187 72% 45%;
+    --primary: 200 85% 50%;
     --primary-foreground: 220 20% 10%;
 
     --secondary: 220 15% 18%;
-    --secondary-foreground: 40 20% 95%;
+    --secondary-foreground: 0 0% 95%;
 
     --muted: 220 15% 20%;
-    --muted-foreground: 40 15% 60%;
+    --muted-foreground: 220 10% 60%;
 
-    --accent: 187 85% 35%;
+    --accent: 200 70% 40%;
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 62% 30%;
-    --destructive-foreground: 40 20% 95%;
+    --destructive-foreground: 0 0% 95%;
 
     --border: 220 15% 22%;
     --input: 220 15% 22%;
-    --ring: 187 72% 45%;
+    --ring: 200 85% 50%;
 
-    --announcement-bg: 187 72% 38%;
+    --announcement-bg: 200 85% 45%;
     --announcement-foreground: 0 0% 100%;
 
     --sidebar-background: 240 5.9% 10%;
@@ -130,9 +132,5 @@
 @layer utilities {
   .text-balance {
     text-wrap: balance;
-  }
-  
-  .hero-gradient {
-    background: var(--hero-gradient);
   }
 }
