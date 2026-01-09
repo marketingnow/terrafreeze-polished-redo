@@ -1,94 +1,102 @@
-import { useState } from "react";
-import { Menu, X, ShoppingCart, User, Search } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import { useState, useEffect } from "react";
+import { Menu, X, ShoppingCart } from "lucide-react";
 import logoImage from "@/assets/logo.jpg";
 
 const Navigation = () => {
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 10);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   const navLinks = [
-    { name: "Shop", href: "#shop" },
-    { name: "How It Works", href: "#how-it-works" },
-    { name: "Reviews", href: "#reviews" },
-    { name: "FAQ", href: "#faq" },
-    { name: "Contact", href: "#contact" },
+    { label: "How It Works", href: "#how-it-works" },
+    { label: "Reviews", href: "#reviews" },
+    { label: "Ingredients", href: "#ingredients" },
+    { label: "Guarantee", href: "#guarantee" },
   ];
 
   return (
-    <nav className="bg-background border-b border-border sticky top-0 z-50">
-      <div className="container">
+    <nav
+      className={`sticky top-0 z-50 transition-all duration-300 ${
+        isScrolled
+          ? "bg-white/90 backdrop-blur-xl shadow-soft"
+          : "bg-white/70 backdrop-blur-md"
+      }`}
+    >
+      <div className="content-container">
         <div className="flex items-center justify-between h-16 lg:h-20">
           {/* Logo */}
-          <a href="#" className="flex items-center">
-            <img 
-              src={logoImage} 
-              alt="TerraFreeze" 
-              className="h-8 lg:h-10 w-auto"
+          <a href="/" className="flex-shrink-0">
+            <img
+              src={logoImage}
+              alt="TerraFreeze"
+              className="h-10 lg:h-12 w-auto object-contain"
             />
           </a>
 
           {/* Desktop Navigation */}
-          <div className="hidden lg:flex items-center gap-8">
+          <div className="hidden lg:flex items-center gap-10">
             {navLinks.map((link) => (
               <a
-                key={link.name}
+                key={link.label}
                 href={link.href}
-                className="text-nav-link hover:text-nav-link-hover font-medium text-sm transition-colors duration-200"
+                className="text-sm font-medium text-foreground/70 hover:text-primary transition-colors duration-200"
               >
-                {link.name}
+                {link.label}
               </a>
             ))}
           </div>
 
-          {/* Right Side Actions */}
-          <div className="flex items-center gap-2 lg:gap-3">
-            <button className="p-2 hover:bg-muted rounded-full transition-colors hidden sm:flex">
-              <Search className="h-5 w-5 text-foreground" />
+          {/* CTA + Cart */}
+          <div className="hidden lg:flex items-center gap-4">
+            <button className="p-2 text-foreground/70 hover:text-primary transition-colors">
+              <ShoppingCart className="w-5 h-5" />
             </button>
-            <button className="p-2 hover:bg-muted rounded-full transition-colors hidden sm:flex">
-              <User className="h-5 w-5 text-foreground" />
-            </button>
-            <button className="p-2 hover:bg-muted rounded-full transition-colors relative">
-              <ShoppingCart className="h-5 w-5 text-foreground" />
-              <span className="absolute -top-0.5 -right-0.5 bg-primary text-primary-foreground text-xs w-4 h-4 rounded-full flex items-center justify-center font-medium">
-                0
-              </span>
-            </button>
-            
-            {/* Mobile Menu Button */}
-            <button
-              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="lg:hidden p-2 hover:bg-muted rounded-full transition-colors"
-              aria-label="Toggle menu"
+            <a
+              href="#buy"
+              className="btn-primary !py-3 !px-6 text-sm"
             >
-              {isMobileMenuOpen ? (
-                <X className="h-6 w-6 text-foreground" />
-              ) : (
-                <Menu className="h-6 w-6 text-foreground" />
-              )}
-            </button>
+              Shop Now
+            </a>
           </div>
+
+          {/* Mobile Menu Button */}
+          <button
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+            className="lg:hidden p-2 text-foreground"
+            aria-label="Toggle menu"
+          >
+            {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+          </button>
         </div>
 
-        {/* Mobile Navigation */}
-        {isMobileMenuOpen && (
-          <div className="lg:hidden border-t border-border py-4 animate-fade-in">
-            <div className="flex flex-col gap-1">
+        {/* Mobile Menu */}
+        {isMenuOpen && (
+          <div className="lg:hidden py-6 border-t border-border animate-fade-up">
+            <div className="flex flex-col gap-4">
               {navLinks.map((link) => (
                 <a
-                  key={link.name}
+                  key={link.label}
                   href={link.href}
-                  className="px-4 py-3 text-nav-link hover:text-nav-link-hover hover:bg-muted rounded-lg font-medium transition-colors"
-                  onClick={() => setIsMobileMenuOpen(false)}
+                  onClick={() => setIsMenuOpen(false)}
+                  className="text-base font-medium text-foreground/80 hover:text-primary transition-colors py-2"
                 >
-                  {link.name}
+                  {link.label}
                 </a>
               ))}
-              <div className="mt-4 px-4">
-                <Button className="w-full bg-accent hover:bg-accent/90 text-accent-foreground">
-                  Shop Now
-                </Button>
-              </div>
+              <a
+                href="#buy"
+                onClick={() => setIsMenuOpen(false)}
+                className="btn-primary text-center mt-4"
+              >
+                Shop Now
+              </a>
             </div>
           </div>
         )}
