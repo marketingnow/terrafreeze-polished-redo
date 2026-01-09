@@ -1,64 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* TerraFreeze Design System - Blue/Grey/White/Black Professional */
+/* TerraFreeze Design System - Glassmorphic Premium */
 
 @layer base {
   :root {
-    /* Core brand colors - Clean whites and greys */
-    --background: 0 0% 100%;
-    --foreground: 220 15% 15%;
+    /* Core colors - Clean, professional */
+    --background: 210 20% 98%;
+    --foreground: 220 25% 10%;
 
     --card: 0 0% 100%;
-    --card-foreground: 220 15% 15%;
+    --card-foreground: 220 25% 10%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 220 15% 15%;
+    --popover-foreground: 220 25% 10%;
 
-    /* Primary - TerraFreeze Blue (from logo) */
+    /* Primary - TerraFreeze Ice Blue */
     --primary: 200 85% 45%;
     --primary-foreground: 0 0% 100%;
 
-    /* Secondary - Light grey/cream for contrast sections */
-    --secondary: 35 30% 94%;
-    --secondary-foreground: 220 15% 15%;
+    /* Secondary - Soft grey */
+    --secondary: 210 15% 96%;
+    --secondary-foreground: 220 25% 10%;
 
-    --muted: 220 10% 96%;
-    --muted-foreground: 220 10% 45%;
+    --muted: 210 15% 92%;
+    --muted-foreground: 220 15% 40%;
 
-    /* Accent - Deep navy blue */
-    --accent: 210 50% 25%;
+    /* Accent - Deep navy */
+    --accent: 215 50% 18%;
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 220 10% 90%;
-    --input: 220 10% 90%;
+    --border: 210 20% 88%;
+    --input: 210 20% 88%;
     --ring: 200 85% 45%;
 
-    --radius: 0.5rem;
+    --radius: 1rem;
 
-    /* Custom TerraFreeze tokens */
-    --announcement-bg: 210 50% 20%;
+    /* Glassmorphic tokens */
+    --glass-bg: 0 0% 100% / 0.7;
+    --glass-border: 0 0% 100% / 0.3;
+    --glass-shadow: 220 25% 10% / 0.08;
+    
+    /* Announcement bar */
+    --announcement-bg: 215 50% 15%;
     --announcement-foreground: 0 0% 100%;
     
-    /* Hero split backgrounds */
-    --hero-left: 0 0% 100%;
-    --hero-right: 35 30% 94%;
-    
-    --trust-badge-bg: 0 0% 100%;
-    --trust-badge-border: 220 10% 88%;
-    
-    --nav-link: 220 10% 35%;
+    /* Navigation */
+    --nav-bg: 0 0% 100% / 0.85;
+    --nav-link: 220 20% 25%;
     --nav-link-hover: 200 85% 45%;
 
+    /* Hero gradient */
+    --hero-gradient-start: 200 70% 96%;
+    --hero-gradient-end: 210 30% 98%;
+
+    /* Trust colors */
+    --trust-icon: 200 85% 45%;
+
     /* Shadows */
-    --shadow-sm: 0 1px 2px 0 hsl(220 15% 15% / 0.05);
-    --shadow-md: 0 4px 6px -1px hsl(220 15% 15% / 0.07), 0 2px 4px -2px hsl(220 15% 15% / 0.05);
-    --shadow-lg: 0 10px 15px -3px hsl(220 15% 15% / 0.08), 0 4px 6px -4px hsl(220 15% 15% / 0.05);
-    --shadow-xl: 0 20px 25px -5px hsl(220 15% 15% / 0.1), 0 8px 10px -6px hsl(220 15% 15% / 0.05);
+    --shadow-soft: 0 4px 30px hsl(220 25% 10% / 0.06);
+    --shadow-glass: 0 8px 32px hsl(220 25% 10% / 0.08);
+    --shadow-elevated: 0 20px 60px hsl(220 25% 10% / 0.12);
 
     /* Sidebar defaults */
     --sidebar-background: 0 0% 98%;
@@ -72,23 +80,23 @@
   }
 
   .dark {
-    --background: 220 20% 10%;
+    --background: 220 25% 8%;
     --foreground: 0 0% 95%;
 
-    --card: 220 20% 12%;
+    --card: 220 25% 12%;
     --card-foreground: 0 0% 95%;
 
-    --popover: 220 20% 12%;
+    --popover: 220 25% 12%;
     --popover-foreground: 0 0% 95%;
 
     --primary: 200 85% 50%;
-    --primary-foreground: 220 20% 10%;
+    --primary-foreground: 220 25% 8%;
 
-    --secondary: 220 15% 18%;
+    --secondary: 220 20% 15%;
     --secondary-foreground: 0 0% 95%;
 
-    --muted: 220 15% 20%;
-    --muted-foreground: 220 10% 60%;
+    --muted: 220 20% 18%;
+    --muted-foreground: 220 15% 55%;
 
     --accent: 200 70% 40%;
     --accent-foreground: 0 0% 100%;
@@ -96,12 +104,17 @@
     --destructive: 0 62% 30%;
     --destructive-foreground: 0 0% 95%;
 
-    --border: 220 15% 22%;
-    --input: 220 15% 22%;
+    --border: 220 20% 20%;
+    --input: 220 20% 20%;
     --ring: 200 85% 50%;
 
+    --glass-bg: 220 25% 12% / 0.8;
+    --glass-border: 220 25% 25% / 0.5;
+    
     --announcement-bg: 200 85% 45%;
     --announcement-foreground: 0 0% 100%;
+
+    --nav-bg: 220 25% 10% / 0.9;
 
     --sidebar-background: 240 5.9% 10%;
     --sidebar-foreground: 240 4.8% 95.9%;
@@ -119,18 +132,101 @@
     @apply border-border;
   }
 
+  html {
+    scroll-behavior: smooth;
+  }
+
   body {
     @apply bg-background text-foreground antialiased;
-    font-feature-settings: "rlig" 1, "calt" 1;
+    font-family: 'DM Sans', system-ui, sans-serif;
   }
 
   h1, h2, h3, h4, h5, h6 {
-    @apply font-heading tracking-tight;
+    font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+    @apply font-bold tracking-tight;
+  }
+}
+
+@layer components {
+  /* Glassmorphic card */
+  .glass-card {
+    @apply relative overflow-hidden;
+    background: hsl(var(--glass-bg));
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid hsl(var(--glass-border));
+    box-shadow: var(--shadow-glass);
+  }
+
+  /* Primary CTA button - No rounded corners as requested */
+  .btn-primary {
+    @apply inline-flex items-center justify-center px-8 py-4 text-base font-semibold;
+    @apply bg-accent text-accent-foreground;
+    @apply transition-all duration-300 ease-out;
+    @apply hover:shadow-elevated hover:-translate-y-0.5;
+    border-radius: 4px;
+  }
+
+  .btn-primary:hover {
+    background: hsl(200 85% 45%);
+  }
+
+  /* Secondary button */
+  .btn-secondary {
+    @apply inline-flex items-center justify-center px-6 py-3 text-sm font-medium;
+    @apply bg-transparent border-2 border-foreground/20 text-foreground;
+    @apply transition-all duration-300;
+    @apply hover:border-primary hover:text-primary;
+    border-radius: 4px;
+  }
+
+  /* Section spacing */
+  .section-padding {
+    @apply py-20 lg:py-28;
+  }
+
+  /* Container max width */
+  .content-container {
+    @apply max-w-7xl mx-auto px-6 lg:px-8;
   }
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
+  }
+
+  /* Fade in animation */
+  .animate-fade-up {
+    animation: fadeUp 0.6s ease-out forwards;
+  }
+
+  @keyframes fadeUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  /* Stagger children */
+  .stagger-children > * {
+    opacity: 0;
+    animation: fadeUp 0.5s ease-out forwards;
+  }
+
+  .stagger-children > *:nth-child(1) { animation-delay: 0.1s; }
+  .stagger-children > *:nth-child(2) { animation-delay: 0.2s; }
+  .stagger-children > *:nth-child(3) { animation-delay: 0.3s; }
+  .stagger-children > *:nth-child(4) { animation-delay: 0.4s; }
+  .stagger-children > *:nth-child(5) { animation-delay: 0.5s; }
+
+  /* Gradient text */
+  .gradient-text {
+    @apply bg-clip-text text-transparent;
+    background-image: linear-gradient(135deg, hsl(200 85% 45%) 0%, hsl(215 50% 18%) 100%);
   }
 }
