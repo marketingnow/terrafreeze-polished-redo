@@ -25,21 +25,23 @@ const pillars = [
 
 const ValuePillars = () => {
   return (
-    <section className="section-padding bg-secondary/50">
+    <section className="section-tight bg-secondary/40">
       <div className="content-container">
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
           {pillars.map((pillar, index) => (
             <div
               key={index}
-              className="glass-card rounded-2xl p-8 text-center hover:shadow-elevated transition-all duration-300 group"
+              className={`glass-card rounded-xl p-5 hover:shadow-elevated transition-all duration-300 group ${
+                index === 0 ? "lg:bg-primary/5" : ""
+              }`}
             >
-              <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-primary/20 to-primary/5 flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform">
-                <pillar.icon className="w-8 h-8 text-primary" />
+              <div className="w-11 h-11 rounded-xl bg-gradient-to-br from-primary/15 to-primary/5 flex items-center justify-center mb-4 group-hover:scale-105 transition-transform">
+                <pillar.icon className="w-5 h-5 text-primary" />
               </div>
-              <h3 className="font-heading text-xl font-bold text-foreground mb-3">
+              <h3 className="font-heading text-base font-bold text-foreground mb-2">
                 {pillar.title}
               </h3>
-              <p className="text-muted-foreground leading-relaxed">
+              <p className="text-sm text-muted-foreground leading-relaxed">
                 {pillar.description}
               </p>
             </div>
