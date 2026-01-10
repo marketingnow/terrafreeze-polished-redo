@@ -180,9 +180,22 @@
     border-radius: 4px;
   }
 
-  /* Section spacing */
+  /* Section spacing - Intentional 3-tier system */
+  .section-major {
+    @apply py-16 lg:py-20; /* ~80px */
+  }
+  
+  .section-supporting {
+    @apply py-10 lg:py-12; /* ~48px */
+  }
+  
+  .section-tight {
+    @apply py-6 lg:py-8; /* ~24-32px */
+  }
+  
+  /* Legacy support */
   .section-padding {
-    @apply py-20 lg:py-28;
+    @apply py-16 lg:py-20;
   }
 
   /* Container max width */

@@ -5,6 +5,8 @@ import TrustBar from "@/components/TrustBar";
 import BrandValueSection from "@/components/BrandValueSection";
 import ValuePillars from "@/components/ValuePillars";
 import ProblemSolutionSection from "@/components/ProblemSolutionSection";
+import ComparisonChart from "@/components/ComparisonChart";
+import IngredientsSection from "@/components/IngredientsSection";
 import TestimonialsSection from "@/components/TestimonialsSection";
 import ProductPurchaseSection from "@/components/ProductPurchaseSection";
 import FAQSection from "@/components/FAQSection";
@@ -22,6 +24,8 @@ const Index = () => {
       <BrandValueSection />
       <ValuePillars />
       <ProblemSolutionSection />
+      <ComparisonChart />
+      <IngredientsSection />
       <TestimonialsSection />
       <ProductPurchaseSection />
       <FAQSection />
