@@ -37,74 +37,76 @@ const ComparisonChart = () => {
             <span className="gradient-text">TERRAFREEZE™</span> vs Other Pain Relief Creams
           </h2>
 
-          {/* Desktop 3-Column Layout */}
-          <div className="hidden md:grid md:grid-cols-3 gap-3">
-            {/* Column 1: Features (Left) */}
-            <div className="bg-muted/40 rounded-2xl p-5">
-              <h3 className="font-heading font-bold text-foreground text-sm uppercase tracking-wider mb-5 text-center">
-                Feature
-              </h3>
-              <div className="space-y-4">
-                {comparisonData.map((row, index) => (
-                  <div key={index} className="flex items-start gap-2 min-h-[72px] py-2 border-b border-border/30 last:border-0">
-                    <div className="w-5 h-5 rounded bg-muted-foreground/20 flex items-center justify-center flex-shrink-0 mt-0.5">
-                      <div className="w-2 h-2 rounded-full bg-muted-foreground/50" />
+          {/* Desktop 3-Column Layout with Background */}
+          <div className="hidden md:block bg-primary/10 rounded-3xl p-6">
+            <div className="grid grid-cols-3 gap-3 items-stretch">
+              {/* Column 1: Features (Left) */}
+              <div className="bg-card rounded-2xl p-5 shadow-sm">
+                <h3 className="font-heading font-bold text-foreground text-sm uppercase tracking-wider mb-5 text-center">
+                  Feature
+                </h3>
+                <div className="space-y-1">
+                  {comparisonData.map((row, index) => (
+                    <div key={index} className="flex items-start gap-2 min-h-[68px] py-2 border-b border-border/20 last:border-0">
+                      <div className="w-5 h-5 rounded bg-muted flex items-center justify-center flex-shrink-0 mt-0.5">
+                        <div className="w-2 h-2 rounded-full bg-muted-foreground/40" />
+                      </div>
+                      <p className="text-sm font-semibold text-foreground leading-snug">
+                        {row.feature}
+                      </p>
                     </div>
-                    <p className="text-sm font-semibold text-foreground leading-snug">
-                      {row.feature}
-                    </p>
-                  </div>
-                ))}
+                  ))}
+                </div>
               </div>
-            </div>
 
-            {/* Column 2: TERRAFREEZE (Center - Hero) */}
-            <div className="bg-primary rounded-2xl p-5 shadow-xl shadow-primary/20 relative z-10 scale-[1.02]">
-              <h3 className="font-heading font-bold text-primary-foreground text-base uppercase tracking-wider mb-5 text-center">
-                TERRAFREEZE™
-              </h3>
-              <div className="space-y-4">
-                {comparisonData.map((row, index) => (
-                  <div key={index} className="flex items-start gap-2 min-h-[72px] py-2 border-b border-primary-foreground/20 last:border-0">
-                    <div className="w-5 h-5 rounded bg-primary-foreground/20 flex items-center justify-center flex-shrink-0 mt-0.5">
-                      <Check className="w-3.5 h-3.5 text-primary-foreground" strokeWidth={3} />
+              {/* Column 2: TERRAFREEZE (Center - Hero) - Extends beyond */}
+              <div className="bg-primary rounded-2xl p-5 shadow-xl shadow-primary/30 relative z-10 -my-4 border-4 border-primary-foreground/20">
+                <h3 className="font-heading font-bold text-primary-foreground text-base uppercase tracking-wider mb-5 text-center">
+                  TERRAFREEZE™
+                </h3>
+                <div className="space-y-1">
+                  {comparisonData.map((row, index) => (
+                    <div key={index} className="flex items-start gap-2 min-h-[68px] py-2 border-b border-primary-foreground/15 last:border-0">
+                      <div className="w-5 h-5 rounded bg-primary-foreground/20 flex items-center justify-center flex-shrink-0 mt-0.5">
+                        <Check className="w-3.5 h-3.5 text-primary-foreground" strokeWidth={3} />
+                      </div>
+                      <p className="text-sm text-primary-foreground leading-snug">
+                        {row.terrafreeze}
+                      </p>
                     </div>
-                    <p className="text-sm text-primary-foreground leading-snug">
-                      {row.terrafreeze}
-                    </p>
-                  </div>
-                ))}
+                  ))}
+                </div>
               </div>
-            </div>
 
-            {/* Column 3: Others (Right) */}
-            <div className="bg-muted/40 rounded-2xl p-5">
-              <h3 className="font-heading font-bold text-muted-foreground text-sm uppercase tracking-wider mb-5 text-center">
-                Other Pain Relief Creams
-              </h3>
-              <div className="space-y-4">
-                {comparisonData.map((row, index) => (
-                  <div key={index} className="flex items-start gap-2 min-h-[72px] py-2 border-b border-border/30 last:border-0">
-                    <div className="w-5 h-5 rounded bg-destructive/10 flex items-center justify-center flex-shrink-0 mt-0.5">
-                      <X className="w-3.5 h-3.5 text-destructive" strokeWidth={3} />
+              {/* Column 3: Others (Right) */}
+              <div className="bg-card rounded-2xl p-5 shadow-sm">
+                <h3 className="font-heading font-bold text-foreground text-sm uppercase tracking-wider mb-5 text-center">
+                  Other Creams
+                </h3>
+                <div className="space-y-1">
+                  {comparisonData.map((row, index) => (
+                    <div key={index} className="flex items-start gap-2 min-h-[68px] py-2 border-b border-border/20 last:border-0">
+                      <div className="w-5 h-5 rounded bg-destructive/10 flex items-center justify-center flex-shrink-0 mt-0.5">
+                        <X className="w-3.5 h-3.5 text-destructive" strokeWidth={3} />
+                      </div>
+                      <p className="text-sm text-foreground leading-snug">
+                        {row.others}
+                      </p>
                     </div>
-                    <p className="text-sm text-muted-foreground leading-snug">
-                      {row.others}
-                    </p>
-                  </div>
-                ))}
+                  ))}
+                </div>
               </div>
             </div>
           </div>
 
           {/* Mobile Stacked Layout */}
-          <div className="md:hidden space-y-3">
+          <div className="md:hidden bg-primary/10 rounded-2xl p-4 space-y-3">
             {comparisonData.map((row, index) => (
-              <div key={index} className="rounded-xl overflow-hidden">
+              <div key={index} className="rounded-xl overflow-hidden shadow-sm">
                 {/* Feature Header */}
-                <div className="bg-muted/40 p-3 flex items-center gap-2">
-                  <div className="w-4 h-4 rounded bg-muted-foreground/20 flex items-center justify-center flex-shrink-0">
-                    <div className="w-1.5 h-1.5 rounded-full bg-muted-foreground/50" />
+                <div className="bg-card p-3 flex items-center gap-2">
+                  <div className="w-4 h-4 rounded bg-muted flex items-center justify-center flex-shrink-0">
+                    <div className="w-1.5 h-1.5 rounded-full bg-muted-foreground/40" />
                   </div>
                   <p className="text-xs font-semibold text-foreground">
                     {row.feature}
@@ -112,7 +114,7 @@ const ComparisonChart = () => {
                 </div>
                 
                 {/* TERRAFREEZE */}
-                <div className="bg-primary p-3 flex items-start gap-2">
+                <div className="bg-primary p-3 flex items-start gap-2 border-x-2 border-primary-foreground/20">
                   <div className="w-4 h-4 rounded bg-primary-foreground/20 flex items-center justify-center flex-shrink-0 mt-0.5">
                     <Check className="w-3 h-3 text-primary-foreground" strokeWidth={3} />
                   </div>
@@ -123,13 +125,13 @@ const ComparisonChart = () => {
                 </div>
                 
                 {/* Others */}
-                <div className="bg-muted/30 p-3 flex items-start gap-2">
+                <div className="bg-card p-3 flex items-start gap-2">
                   <div className="w-4 h-4 rounded bg-destructive/10 flex items-center justify-center flex-shrink-0 mt-0.5">
                     <X className="w-3 h-3 text-destructive" strokeWidth={3} />
                   </div>
                   <div>
                     <span className="text-[10px] font-medium text-muted-foreground uppercase tracking-wider">Others</span>
-                    <p className="text-xs text-muted-foreground mt-0.5">{row.others}</p>
+                    <p className="text-xs text-foreground mt-0.5">{row.others}</p>
                   </div>
                 </div>
               </div>
