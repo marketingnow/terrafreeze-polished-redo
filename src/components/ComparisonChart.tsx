@@ -38,10 +38,10 @@ const ComparisonChart = () => {
           </h2>
 
           {/* Desktop 3-Column Layout with Background */}
-          <div className="hidden md:block bg-primary/10 rounded-3xl p-6">
-            <div className="grid grid-cols-3 gap-3 items-stretch">
+          <div className="hidden md:block bg-primary/10 rounded-3xl py-10 px-6 -mx-4 sm:-mx-6 lg:-mx-8">
+            <div className="grid grid-cols-3 items-stretch max-w-4xl mx-auto">
               {/* Column 1: Features (Left) */}
-              <div className="bg-card rounded-2xl p-5 shadow-sm">
+              <div className="bg-card rounded-l-2xl p-5 shadow-sm">
                 <h3 className="font-heading font-bold text-foreground text-sm uppercase tracking-wider mb-5 text-center">
                   Feature
                 </h3>
@@ -79,7 +79,7 @@ const ComparisonChart = () => {
               </div>
 
               {/* Column 3: Others (Right) */}
-              <div className="bg-card rounded-2xl p-5 shadow-sm">
+              <div className="bg-card rounded-r-2xl p-5 shadow-sm">
                 <h3 className="font-heading font-bold text-foreground text-sm uppercase tracking-wider mb-5 text-center">
                   Other Creams
                 </h3>
