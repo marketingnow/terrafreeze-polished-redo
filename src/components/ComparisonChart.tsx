@@ -30,77 +30,75 @@ const comparisonData = [
 
 const ComparisonChart = () => {
   return (
-    <section className="section-supporting bg-background">
+    <section className="bg-primary/10 py-12">
       <div className="content-container">
         <div className="max-w-4xl mx-auto">
           <h2 className="font-heading text-2xl sm:text-3xl font-bold text-foreground mb-8 text-center">
             <span className="gradient-text">TERRAFREEZE™</span> vs Other Pain Relief Creams
           </h2>
 
-          {/* Desktop 3-Column Layout with Background */}
-          <div className="hidden md:block bg-primary/10 rounded-3xl py-10 px-6 -mx-4 sm:-mx-6 lg:-mx-8">
-            <div className="grid grid-cols-3 items-stretch max-w-4xl mx-auto">
-              {/* Column 1: Features (Left) */}
-              <div className="bg-card rounded-l-2xl p-5 shadow-sm">
-                <h3 className="font-heading font-bold text-foreground text-sm uppercase tracking-wider mb-5 text-center">
-                  Feature
-                </h3>
-                <div className="space-y-1">
-                  {comparisonData.map((row, index) => (
-                    <div key={index} className="flex items-start gap-2 min-h-[68px] py-2 border-b border-border/20 last:border-0">
-                      <div className="w-5 h-5 rounded bg-muted flex items-center justify-center flex-shrink-0 mt-0.5">
-                        <div className="w-2 h-2 rounded-full bg-muted-foreground/40" />
-                      </div>
-                      <p className="text-sm font-semibold text-foreground leading-snug">
-                        {row.feature}
-                      </p>
+          {/* Desktop 3-Column Layout */}
+          <div className="hidden md:grid md:grid-cols-3 items-stretch">
+            {/* Column 1: Features (Left) */}
+            <div className="bg-card rounded-l-2xl p-5 shadow-sm">
+              <h3 className="font-heading font-bold text-foreground text-sm uppercase tracking-wider mb-5 text-center">
+                Feature
+              </h3>
+              <div className="space-y-1">
+                {comparisonData.map((row, index) => (
+                  <div key={index} className="flex items-start gap-2 min-h-[68px] py-2 border-b border-border/20 last:border-0">
+                    <div className="w-5 h-5 rounded bg-muted flex items-center justify-center flex-shrink-0 mt-0.5">
+                      <div className="w-2 h-2 rounded-full bg-muted-foreground/40" />
                     </div>
-                  ))}
-                </div>
+                    <p className="text-sm font-semibold text-foreground leading-snug">
+                      {row.feature}
+                    </p>
+                  </div>
+                ))}
               </div>
+            </div>
 
-              {/* Column 2: TERRAFREEZE (Center - Hero) - Extends beyond */}
-              <div className="bg-primary rounded-2xl p-5 shadow-xl shadow-primary/30 relative z-10 -my-4 border-4 border-primary-foreground/20">
-                <h3 className="font-heading font-bold text-primary-foreground text-base uppercase tracking-wider mb-5 text-center">
-                  TERRAFREEZE™
-                </h3>
-                <div className="space-y-1">
-                  {comparisonData.map((row, index) => (
-                    <div key={index} className="flex items-start gap-2 min-h-[68px] py-2 border-b border-primary-foreground/15 last:border-0">
-                      <div className="w-5 h-5 rounded bg-primary-foreground/20 flex items-center justify-center flex-shrink-0 mt-0.5">
-                        <Check className="w-3.5 h-3.5 text-primary-foreground" strokeWidth={3} />
-                      </div>
-                      <p className="text-sm text-primary-foreground leading-snug">
-                        {row.terrafreeze}
-                      </p>
+            {/* Column 2: TERRAFREEZE (Center - Hero) - Extends beyond */}
+            <div className="bg-primary rounded-2xl p-5 shadow-xl shadow-primary/30 relative z-10 -my-5 border-4 border-primary-foreground/20">
+              <h3 className="font-heading font-bold text-primary-foreground text-base uppercase tracking-wider mb-5 text-center">
+                TERRAFREEZE™
+              </h3>
+              <div className="space-y-1">
+                {comparisonData.map((row, index) => (
+                  <div key={index} className="flex items-start gap-2 min-h-[68px] py-2 border-b border-primary-foreground/15 last:border-0">
+                    <div className="w-5 h-5 rounded bg-primary-foreground/20 flex items-center justify-center flex-shrink-0 mt-0.5">
+                      <Check className="w-3.5 h-3.5 text-primary-foreground" strokeWidth={3} />
                     </div>
-                  ))}
-                </div>
+                    <p className="text-sm text-primary-foreground leading-snug">
+                      {row.terrafreeze}
+                    </p>
+                  </div>
+                ))}
               </div>
+            </div>
 
-              {/* Column 3: Others (Right) */}
-              <div className="bg-card rounded-r-2xl p-5 shadow-sm">
-                <h3 className="font-heading font-bold text-foreground text-sm uppercase tracking-wider mb-5 text-center">
-                  Other Creams
-                </h3>
-                <div className="space-y-1">
-                  {comparisonData.map((row, index) => (
-                    <div key={index} className="flex items-start gap-2 min-h-[68px] py-2 border-b border-border/20 last:border-0">
-                      <div className="w-5 h-5 rounded bg-destructive/10 flex items-center justify-center flex-shrink-0 mt-0.5">
-                        <X className="w-3.5 h-3.5 text-destructive" strokeWidth={3} />
-                      </div>
-                      <p className="text-sm text-foreground leading-snug">
-                        {row.others}
-                      </p>
+            {/* Column 3: Others (Right) */}
+            <div className="bg-card rounded-r-2xl p-5 shadow-sm">
+              <h3 className="font-heading font-bold text-foreground text-sm uppercase tracking-wider mb-5 text-center">
+                Other Creams
+              </h3>
+              <div className="space-y-1">
+                {comparisonData.map((row, index) => (
+                  <div key={index} className="flex items-start gap-2 min-h-[68px] py-2 border-b border-border/20 last:border-0">
+                    <div className="w-5 h-5 rounded bg-destructive/10 flex items-center justify-center flex-shrink-0 mt-0.5">
+                      <X className="w-3.5 h-3.5 text-destructive" strokeWidth={3} />
                     </div>
-                  ))}
-                </div>
+                    <p className="text-sm text-foreground leading-snug">
+                      {row.others}
+                    </p>
+                  </div>
+                ))}
               </div>
             </div>
           </div>
 
           {/* Mobile Stacked Layout */}
-          <div className="md:hidden bg-primary/10 rounded-2xl p-4 space-y-3">
+          <div className="md:hidden space-y-3">
             {comparisonData.map((row, index) => (
               <div key={index} className="rounded-xl overflow-hidden shadow-sm">
                 {/* Feature Header */}
