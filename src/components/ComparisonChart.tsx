@@ -1,40 +1,31 @@
 import { Check, X } from "lucide-react";
-
-const comparisonData = [
-  {
-    feature: "Relief you can actually feel — fast",
-    terrafreeze: "Cooling relief hits in minutes, not \"eventually.\"",
-    others: "Weak, delayed, or you're left wondering if it's even working.",
-  },
-  {
-    feature: "Handles more than one kind of pain",
-    terrafreeze: "Works on muscle aches, joint stiffness, nerve discomfort, arthritis, and inflammation — all at once.",
-    others: "Built for one thing only; everything else is a gamble.",
-  },
-  {
-    feature: "Doesn't just cover it up — helps you heal",
-    terrafreeze: "Tackles inflammation and supports tissue recovery, not just surface-level numbing.",
-    others: "Temporary mask that wears off without fixing anything underneath.",
-  },
-  {
-    feature: "No painful burn or angry skin",
-    terrafreeze: "Soothing cool sensation without harsh sting or redness.",
-    others: "Burns like fire, irritates sensitive skin, or causes rashes.",
-  },
-  {
-    feature: "Backed by science, not just hype",
-    terrafreeze: "Research-validated ingredients chosen for proven pain-relief pathways.",
-    others: "Trendy buzzwords and fillers with little to no real evidence.",
-  },
-];
-
+const comparisonData = [{
+  feature: "Relief you can actually feel — fast",
+  terrafreeze: "Cooling relief hits in minutes, not \"eventually.\"",
+  others: "Weak, delayed, or you're left wondering if it's even working."
+}, {
+  feature: "Handles more than one kind of pain",
+  terrafreeze: "Works on muscle aches, joint stiffness, nerve discomfort, arthritis, and inflammation — all at once.",
+  others: "Built for one thing only; everything else is a gamble."
+}, {
+  feature: "Doesn't just cover it up — helps you heal",
+  terrafreeze: "Tackles inflammation and supports tissue recovery, not just surface-level numbing.",
+  others: "Temporary mask that wears off without fixing anything underneath."
+}, {
+  feature: "No painful burn or angry skin",
+  terrafreeze: "Soothing cool sensation without harsh sting or redness.",
+  others: "Burns like fire, irritates sensitive skin, or causes rashes."
+}, {
+  feature: "Backed by science, not just hype",
+  terrafreeze: "Research-validated ingredients chosen for proven pain-relief pathways.",
+  others: "Trendy buzzwords and fillers with little to no real evidence."
+}];
 const ComparisonChart = () => {
-  return (
-    <section className="bg-primary/10 py-12">
+  return <section className="bg-primary/10 py-12">
       <div className="content-container">
         <div className="max-w-4xl mx-auto">
           <h2 className="font-heading text-2xl sm:text-3xl font-bold text-foreground mb-8 text-center">
-            <span className="gradient-text">TERRAFREEZE™</span> vs Other Pain Relief Creams
+            <span className="gradient-text">TERRAFREEZE</span> vs Other Pain Relief Creams
           </h2>
 
           {/* Desktop 3-Column Layout */}
@@ -45,35 +36,31 @@ const ComparisonChart = () => {
                 Feature
               </h3>
               <div className="space-y-1">
-                {comparisonData.map((row, index) => (
-                  <div key={index} className="flex items-start gap-2 min-h-[68px] py-2 border-b border-border/20 last:border-0">
+                {comparisonData.map((row, index) => <div key={index} className="flex items-start gap-2 min-h-[68px] py-2 border-b border-border/20 last:border-0">
                     <div className="w-5 h-5 rounded bg-muted flex items-center justify-center flex-shrink-0 mt-0.5">
                       <div className="w-2 h-2 rounded-full bg-muted-foreground/40" />
                     </div>
                     <p className="text-sm font-semibold text-foreground leading-snug">
                       {row.feature}
                     </p>
-                  </div>
-                ))}
+                  </div>)}
               </div>
             </div>
 
             {/* Column 2: TERRAFREEZE (Center - Hero) - Extends beyond */}
             <div className="bg-primary rounded-2xl p-5 shadow-xl shadow-primary/30 relative z-10 -my-5 border-4 border-primary-foreground/20">
               <h3 className="font-heading font-bold text-primary-foreground text-base uppercase tracking-wider mb-5 text-center">
-                TERRAFREEZE™
+                TERRAFREEZE
               </h3>
               <div className="space-y-1">
-                {comparisonData.map((row, index) => (
-                  <div key={index} className="flex items-start gap-2 min-h-[68px] py-2 border-b border-primary-foreground/15 last:border-0">
+                {comparisonData.map((row, index) => <div key={index} className="flex items-start gap-2 min-h-[68px] py-2 border-b border-primary-foreground/15 last:border-0">
                     <div className="w-5 h-5 rounded bg-primary-foreground/20 flex items-center justify-center flex-shrink-0 mt-0.5">
                       <Check className="w-3.5 h-3.5 text-primary-foreground" strokeWidth={3} />
                     </div>
                     <p className="text-sm text-primary-foreground leading-snug">
                       {row.terrafreeze}
                     </p>
-                  </div>
-                ))}
+                  </div>)}
               </div>
             </div>
 
@@ -83,24 +70,21 @@ const ComparisonChart = () => {
                 Other Creams
               </h3>
               <div className="space-y-1">
-                {comparisonData.map((row, index) => (
-                  <div key={index} className="flex items-start gap-2 min-h-[68px] py-2 border-b border-border/20 last:border-0">
+                {comparisonData.map((row, index) => <div key={index} className="flex items-start gap-2 min-h-[68px] py-2 border-b border-border/20 last:border-0">
                     <div className="w-5 h-5 rounded bg-destructive/10 flex items-center justify-center flex-shrink-0 mt-0.5">
                       <X className="w-3.5 h-3.5 text-destructive" strokeWidth={3} />
                     </div>
                     <p className="text-sm text-foreground leading-snug">
                       {row.others}
                     </p>
-                  </div>
-                ))}
+                  </div>)}
               </div>
             </div>
           </div>
 
           {/* Mobile Stacked Layout */}
           <div className="md:hidden space-y-3">
-            {comparisonData.map((row, index) => (
-              <div key={index} className="rounded-xl overflow-hidden shadow-sm">
+            {comparisonData.map((row, index) => <div key={index} className="rounded-xl overflow-hidden shadow-sm">
                 {/* Feature Header */}
                 <div className="bg-card p-3 flex items-center gap-2">
                   <div className="w-4 h-4 rounded bg-muted flex items-center justify-center flex-shrink-0">
@@ -132,13 +116,10 @@ const ComparisonChart = () => {
                     <p className="text-xs text-foreground mt-0.5">{row.others}</p>
                   </div>
                 </div>
-              </div>
-            ))}
+              </div>)}
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default ComparisonChart;

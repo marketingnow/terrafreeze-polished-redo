@@ -1,11 +1,10 @@
 const BrandValueSection = () => {
-  return (
-    <section className="section-supporting bg-background">
+  return <section className="section-supporting bg-background">
       <div className="content-container">
         <div className="max-w-3xl mx-auto text-center">
           <h2 className="font-heading text-2xl sm:text-3xl lg:text-4xl font-bold text-foreground mb-4">
             Pain Slows You Down.{" "}
-            <span className="gradient-text">TERRAFREEZE™</span>{" "}
+            <span className="gradient-text">TERRAFREEZE</span>{" "}
             Helps You Take Control Again.
           </h2>
           <p className="text-base lg:text-lg text-muted-foreground leading-relaxed">
@@ -15,8 +14,6 @@ const BrandValueSection = () => {
           </p>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default BrandValueSection;
