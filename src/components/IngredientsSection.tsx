@@ -7,7 +7,7 @@ const ingredients = [
     description: "Carries active ingredients through all 7 layers of skin directly to inflamed tissues. Faster relief, reduced swelling, and pain that actually goes away.",
     badge: "Clinical-Grade Carrier",
     badgeColor: "bg-primary",
-    image: "https://images.unsplash.com/photo-608571423902-eed4a5ad8108?w=200&h=200&fit=crop&q=80"
+    image: "https://images.unsplash.com/photo-1608571423902-eed4a5ad8108?w=200&h=200&fit=crop&q=80"
   },
   {
     category: "ANTI-INFLAMMATORY",
