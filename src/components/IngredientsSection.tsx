@@ -7,7 +7,7 @@ const ingredients = [
     description: "Carries active ingredients through all 7 layers of skin directly to inflamed tissues. Faster relief, reduced swelling, and pain that actually goes away.",
     badge: "Clinical-Grade Carrier",
     badgeColor: "bg-primary",
-    image: "https://images.unsplash.com/photo-1608571423902-eed4a5ad8108?w=200&h=200&fit=crop&q=80"
+    image: "https://terrafreeze.com/wp-content/uploads/2024/09/terrafreeze_3.png"
   },
   {
     category: "ANTI-INFLAMMATORY",
@@ -15,7 +15,7 @@ const ingredients = [
     description: "Powerful natural herb that reduces inflammation and bruising at the cellular level. Less swelling, faster healing, and relief that lasts for hours.",
     badge: "Used for 500+ years",
     badgeColor: "bg-green-600",
-    image: "https://images.unsplash.com/photo-1518882605630-8eb589210781?w=200&h=200&fit=crop&q=80"
+    image: "https://terrafreeze.com/wp-content/uploads/2024/09/terrafreeze_4.png"
   },
   {
     category: "JOINT SUPPORT",
@@ -23,7 +23,7 @@ const ingredients = [
     description: "Supports joint health by rebuilding cartilage and reducing oxidative stress. Improved mobility, less stiffness, and long-term joint protection.",
     badge: "Supports cellular repair",
     badgeColor: "bg-accent",
-    image: "https://images.unsplash.com/photo-1559757175-7cb05f416679?w=200&h=200&fit=crop&q=80"
+    image: "https://terrafreeze.com/wp-content/uploads/2024/09/terrafreeze_10.png"
   },
   {
     category: "COOLING RELIEF",
@@ -31,23 +31,23 @@ const ingredients = [
     description: "Provides immediate cooling sensation that soothes pain on contact. Creates a refreshing feeling while blocking pain signals to the brain.",
     badge: "Instant cooling action",
     badgeColor: "bg-primary",
-    image: "https://images.unsplash.com/photo-1628556270448-4d4e4148e1b1?w=200&h=200&fit=crop&q=80"
+    image: "https://terrafreeze.com/wp-content/uploads/2024/09/terrafreeze_1.png"
   },
   {
     category: "WARMING ACTION",
-    name: "Camphor",
-    description: "Stimulates blood flow to treated areas, promoting natural healing. Provides warming relief that penetrates deep into muscles and joints.",
+    name: "Methyl Salicylate",
+    description: "Generates a warming sensation to increase blood flow and ease deep joint stiffness. Provides lasting relief that penetrates deep into muscles.",
     badge: "Improves circulation",
     badgeColor: "bg-green-600",
-    image: "https://images.unsplash.com/photo-1474979266404-7d59ebcbe696?w=200&h=200&fit=crop&q=80"
+    image: "https://terrafreeze.com/wp-content/uploads/2024/09/terrafreeze_5.png"
   },
   {
     category: "SKIN REPAIR",
-    name: "Vitamin E",
-    description: "Powerful antioxidant that nourishes and protects skin while enhancing absorption. Supports tissue repair and keeps skin healthy.",
+    name: "Vitamins C & E",
+    description: "Powerful antioxidants that nourish and protect skin while enhancing absorption. Supports tissue repair and keeps skin healthy.",
     badge: "Antioxidant protection",
     badgeColor: "bg-accent",
-    image: "https://images.unsplash.com/photo-1505751172876-fa1923c5c528?w=200&h=200&fit=crop&q=80"
+    image: "https://terrafreeze.com/wp-content/uploads/2024/09/terrafreeze_11.png"
   },
 ];
 
