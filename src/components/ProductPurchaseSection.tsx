@@ -5,30 +5,33 @@ import productImage from "@/assets/product.png";
 const packages = [
   {
     id: 1,
-    tubes: 1,
+    jars: 1,
     label: "Try It",
     originalPrice: 99.99,
     price: 89.99,
-    perTube: 89.99,
-    popular: false
+    perJar: 89.99,
+    popular: false,
+    cartUrl: "https://terrafreeze.com/?add-to-cart=35086"
   },
   {
     id: 3,
-    tubes: 3,
+    jars: 3,
     label: "Best Value",
     originalPrice: 299.97,
     price: 199.99,
-    perTube: 66.66,
-    popular: true
+    perJar: 66.66,
+    popular: true,
+    cartUrl: "https://terrafreeze.com/?add-to-cart=19137"
   },
   {
     id: 6,
-    tubes: 6,
+    jars: 6,
     label: "Maximum Savings",
     originalPrice: 599.94,
     price: 349.99,
-    perTube: 58.33,
-    popular: false
+    perJar: 58.33,
+    popular: false,
+    cartUrl: "https://terrafreeze.com/?add-to-cart=19138"
   }
 ];
 
@@ -143,7 +146,7 @@ const ProductPurchaseSection = () => {
                         </div>
                         <div>
                           <span className="font-semibold text-foreground text-sm">
-                            {pkg.tubes} {pkg.tubes === 1 ? "Tube" : "Tubes"}
+                            {pkg.jars} {pkg.jars === 1 ? "Jar" : "Jars"}
                           </span>
                           <span className="text-muted-foreground text-sm ml-2">
                             — {pkg.label}
@@ -160,7 +163,7 @@ const ProductPurchaseSection = () => {
                           ${pkg.price.toFixed(2)}
                         </span>
                         <span className="block text-xs text-muted-foreground">
-                          ${pkg.perTube.toFixed(2)}/tube
+                          ${pkg.perJar.toFixed(2)}/jar
                         </span>
                       </div>
                     </div>
@@ -169,9 +172,12 @@ const ProductPurchaseSection = () => {
               </div>
 
               {/* CTA Button */}
-              <button className="btn-primary w-full text-base py-4 mb-4">
+              <a 
+                href={selected.cartUrl}
+                className="btn-primary w-full text-base py-4 mb-4 block text-center"
+              >
                 Add to Cart — Get Relief Today
-              </button>
+              </a>
 
               {/* Trust indicators */}
               <div className="flex flex-wrap justify-center gap-5 text-xs text-muted-foreground">
