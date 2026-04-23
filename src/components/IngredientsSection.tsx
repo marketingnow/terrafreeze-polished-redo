@@ -1,55 +1,53 @@
 import { Card } from "@/components/ui/card";
 import emuOilImage from "@/assets/ingredient-emu-oil.jpg";
 import arnicaImage from "@/assets/ingredient-arnica.jpg";
+import mentholImage from "@/assets/ingredient-menthol.jpg";
+import msmImage from "@/assets/ingredient-msm.jpg";
+import methylImage from "@/assets/ingredient-methyl.jpg";
+import vitaminsImage from "@/assets/ingredient-vitamins.jpg";
 
 const ingredients = [
+  {
+    category: "COOLING RELIEF",
+    name: "Menthol",
+    description: "Provides immediate cooling sensation that soothes pain on contact. Creates a refreshing feeling while blocking pain signals to the brain.",
+    badge: "Instant cooling action",
+    image: mentholImage,
+  },
   {
     category: "DEEP PENETRATION",
     name: "Emu Oil",
     description: "Carries active ingredients through all 7 layers of skin directly to inflamed tissues. Faster relief, reduced swelling, and pain that actually goes away.",
     badge: "Clinical-Grade Carrier",
-    badgeColor: "bg-primary",
-    image: emuOilImage
+    image: emuOilImage,
   },
   {
     category: "ANTI-INFLAMMATORY",
     name: "Arnica Montana",
     description: "Powerful natural herb that reduces inflammation and bruising at the cellular level. Less swelling, faster healing, and relief that lasts for hours.",
     badge: "Used for 500+ years",
-    badgeColor: "bg-green-600",
-    image: arnicaImage
+    image: arnicaImage,
   },
   {
     category: "JOINT SUPPORT",
     name: "MSM & Glucosamine",
     description: "Supports joint health by rebuilding cartilage and reducing oxidative stress. Improved mobility, less stiffness, and long-term joint protection.",
     badge: "Supports cellular repair",
-    badgeColor: "bg-accent",
-    image: "https://terrafreeze.com/wp-content/uploads/2024/09/terrafreeze_10.png"
-  },
-  {
-    category: "COOLING RELIEF",
-    name: "Menthol",
-    description: "Provides immediate cooling sensation that soothes pain on contact. Creates a refreshing feeling while blocking pain signals to the brain.",
-    badge: "Instant cooling action",
-    badgeColor: "bg-primary",
-    image: "https://terrafreeze.com/wp-content/uploads/2024/09/terrafreeze_1.png"
+    image: msmImage,
   },
   {
     category: "WARMING ACTION",
     name: "Methyl Salicylate",
     description: "Generates a warming sensation to increase blood flow and ease deep joint stiffness. Provides lasting relief that penetrates deep into muscles.",
     badge: "Improves circulation",
-    badgeColor: "bg-green-600",
-    image: "https://terrafreeze.com/wp-content/uploads/2024/09/terrafreeze_5.png"
+    image: methylImage,
   },
   {
     category: "SKIN REPAIR",
     name: "Vitamins C & E",
     description: "Powerful antioxidants that nourish and protect skin while enhancing absorption. Supports tissue repair and keeps skin healthy.",
     badge: "Antioxidant protection",
-    badgeColor: "bg-accent",
-    image: "https://terrafreeze.com/wp-content/uploads/2024/09/terrafreeze_11.png"
+    image: vitaminsImage,
   },
 ];
 
@@ -79,80 +77,42 @@ const IngredientsSection = () => {
 
           {/* 6 Ingredient Cards - 3x2 Grid */}
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-10">
-            {ingredients.map((ingredient, index) => {
-              const isFeatured = index === 0 || index === 1;
+            {ingredients.map((ingredient, index) => (
+              <Card
+                key={index}
+                className="relative overflow-hidden rounded-2xl flex flex-col h-full min-h-[280px] hover:shadow-elevated transition-all duration-300 border-0 p-0"
+              >
+                {/* Background image */}
+                <img
+                  src={ingredient.image}
+                  alt={ingredient.name}
+                  loading="lazy"
+                  width={1280}
+                  height={896}
+                  className="absolute inset-0 w-full h-full object-cover"
+                />
+                {/* Subtle darkening for text legibility */}
+                <div className="absolute inset-0 bg-gradient-to-r from-black/75 via-black/45 to-black/25" />
 
-              if (isFeatured) {
-                return (
-                  <Card
-                    key={index}
-                    className="relative overflow-hidden rounded-2xl flex flex-col h-full min-h-[280px] hover:shadow-elevated transition-all duration-300 border-0 p-0"
-                  >
-                    {/* Background image */}
-                    <img
-                      src={ingredient.image}
-                      alt={ingredient.name}
-                      className="absolute inset-0 w-full h-full object-cover"
-                    />
-                    {/* Subtle darkening for text legibility */}
-                    <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/40 to-black/20" />
-
-                    {/* Content */}
-                    <div className="relative flex flex-col h-full p-7">
-                      <h3 className="font-heading text-3xl lg:text-4xl font-bold text-white mb-3 leading-tight">
-                        {ingredient.name}
-                      </h3>
-
-                      <p className="text-white/90 text-sm lg:text-base leading-relaxed font-medium max-w-[75%]">
-                        {ingredient.description}
-                      </p>
-
-                      {/* Pill badge bottom-right */}
-                      <div className="absolute bottom-5 right-5">
-                        <span className="inline-block px-4 py-1.5 bg-white text-foreground text-xs font-mono rounded-full shadow-md">
-                          {ingredient.badge}
-                        </span>
-                      </div>
-                    </div>
-                  </Card>
-                );
-              }
-
-              return (
-                <Card key={index} className="glass-card p-6 flex flex-col h-full hover:shadow-elevated transition-all duration-300">
-                  {/* Category Badge */}
-                  <div className="mb-4">
-                    <span className="inline-block px-3 py-1 bg-primary text-primary-foreground text-xs font-bold rounded uppercase tracking-wide">
-                      {ingredient.category}
-                    </span>
-                  </div>
-
-                  {/* Ingredient Name */}
-                  <h3 className="font-heading text-xl font-bold text-foreground mb-3">
+                {/* Content */}
+                <div className="relative flex flex-col h-full p-7">
+                  <h3 className="font-heading text-3xl lg:text-4xl font-bold text-white mb-3 leading-tight">
                     {ingredient.name}
                   </h3>
 
-                  {/* Description */}
-                  <p className="text-muted-foreground text-sm leading-relaxed flex-grow mb-6">
+                  <p className="text-white/90 text-sm lg:text-base leading-relaxed font-medium max-w-[75%]">
                     {ingredient.description}
                   </p>
 
-                  {/* Bottom section with badge and image */}
-                  <div className="flex items-end justify-between mt-auto">
-                    <span className={`text-primary text-sm font-medium`}>
+                  {/* Pill badge bottom-right */}
+                  <div className="absolute bottom-5 right-5">
+                    <span className="inline-block px-4 py-1.5 bg-white text-foreground text-xs font-mono rounded-full shadow-md">
                       {ingredient.badge}
                     </span>
-                    <div className="w-20 h-20 rounded-full overflow-hidden flex-shrink-0">
-                      <img
-                        src={ingredient.image}
-                        alt={ingredient.name}
-                        className="w-full h-full object-cover"
-                      />
-                    </div>
                   </div>
-                </Card>
-              );
-            })}
+                </div>
+              </Card>
+            ))}
           </div>
         </div>
       </div>
