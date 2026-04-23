@@ -1,4 +1,5 @@
 import { Card } from "@/components/ui/card";
+import emuOilImage from "@/assets/ingredient-emu-oil.jpg";
 
 const ingredients = [
   {
@@ -7,7 +8,7 @@ const ingredients = [
     description: "Carries active ingredients through all 7 layers of skin directly to inflamed tissues. Faster relief, reduced swelling, and pain that actually goes away.",
     badge: "Clinical-Grade Carrier",
     badgeColor: "bg-primary",
-    image: "https://terrafreeze.com/wp-content/uploads/2024/09/terrafreeze_3.png"
+    image: emuOilImage
   },
   {
     category: "ANTI-INFLAMMATORY",
