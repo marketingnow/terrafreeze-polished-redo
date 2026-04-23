@@ -96,7 +96,7 @@ const IngredientsSection = () => {
 
                 {/* Content */}
                 <div className="relative flex flex-col h-full p-7">
-                  <h3 className="font-heading text-3xl lg:text-4xl font-bold text-white mb-3 leading-tight">
+                  <h3 className="font-heading text-2xl sm:text-3xl lg:text-[2rem] font-bold text-white mb-3 leading-tight whitespace-nowrap">
                     {ingredient.name}
                   </h3>
 
