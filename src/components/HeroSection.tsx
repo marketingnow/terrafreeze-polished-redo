@@ -86,12 +86,12 @@ const HeroSection = () => {
             </h1>
 
             {/* Subheadline */}
-            <p className="text-sm lg:text-base text-muted-foreground leading-relaxed mb-4 max-w-lg">
+            <p className="text-base lg:text-lg text-black font-medium leading-relaxed mb-4 max-w-lg">
               One small dab. 60 seconds. Hours of relief. Non-greasy, no smell, no mess.
             </p>
 
             {/* Bullet points */}
-            <ul className="space-y-2 mb-5">
+            <ul className="space-y-2.5 mb-5">
               {[
                 "Works on arthritis, joint pain, muscle aches, and inflammation",
                 "FDA Registered • Ships from the USA",
@@ -101,7 +101,7 @@ const HeroSection = () => {
                   <span className="flex-shrink-0 w-5 h-5 rounded-full bg-primary/10 flex items-center justify-center mt-0.5">
                     <Check className="w-3 h-3 text-primary" />
                   </span>
-                  <span className="text-foreground/80 text-sm">{point}</span>
+                  <span className="text-black font-medium text-base">{point}</span>
                 </li>
               ))}
             </ul>
