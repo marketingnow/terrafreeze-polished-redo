@@ -4,61 +4,79 @@ import productImage from "@/assets/product.png";
 const HeroSection = () => {
   return (
     <section className="relative overflow-hidden">
-      {/* Split background: cool grey left, deep icy blue right */}
+      {/* Base: clean white → light ice blue, deeper on the right */}
       <div
         className="absolute inset-0"
         style={{
           background:
-            "linear-gradient(90deg, hsl(210 12% 90%) 0%, hsl(210 18% 92%) 40%, hsl(200 70% 82%) 65%, hsl(195 85% 70%) 100%)",
+            "linear-gradient(90deg, hsl(0 0% 100%) 0%, hsl(205 40% 97%) 45%, hsl(200 60% 90%) 75%, hsl(202 65% 82%) 100%)",
         }}
       />
 
-      {/* Icy frost overlay on right side */}
+      {/* Right column depth: deeper crystalline blue behind product */}
       <div
-        className="absolute inset-0"
+        className="absolute inset-y-0 right-0 w-1/2"
         style={{
           background:
-            "radial-gradient(ellipse 70% 90% at 85% 50%, hsl(190 100% 75% / 0.55) 0%, hsl(195 95% 80% / 0.3) 35%, transparent 65%)",
+            "radial-gradient(ellipse 80% 75% at 75% 50%, hsl(210 55% 78% / 0.55) 0%, hsl(208 60% 70% / 0.25) 45%, transparent 75%)",
         }}
       />
 
-      {/* Bright icy glow behind product */}
+      {/* Soft crystalline glow behind the jar */}
       <div
-        className="absolute top-1/2 right-[12%] -translate-y-1/2 w-[600px] h-[600px] rounded-full blur-3xl"
+        className="absolute top-1/2 right-[14%] -translate-y-1/2 w-[520px] h-[520px] rounded-full blur-3xl"
         style={{
           background:
-            "radial-gradient(circle, hsl(185 100% 85% / 0.85) 0%, hsl(195 95% 75% / 0.45) 40%, transparent 70%)",
+            "radial-gradient(circle, hsl(200 70% 85% / 0.6) 0%, hsl(210 60% 75% / 0.25) 50%, transparent 75%)",
         }}
       />
 
-      {/* Top frost highlight */}
-      <div className="absolute -top-32 right-0 w-[500px] h-[500px] rounded-full blur-3xl bg-cyan-300/40" />
+      {/* Top-right corner: navy ice shards (confined, fading inward) */}
+      <div
+        className="pointer-events-none absolute top-0 right-0 w-[38%] h-[55%]"
+        style={{
+          maskImage:
+            "radial-gradient(ellipse 100% 100% at 100% 0%, black 0%, black 30%, transparent 75%)",
+          WebkitMaskImage:
+            "radial-gradient(ellipse 100% 100% at 100% 0%, black 0%, black 30%, transparent 75%)",
+        }}
+      >
+        <svg viewBox="0 0 400 400" className="w-full h-full" preserveAspectRatio="none">
+          <defs>
+            <linearGradient id="shardTR" x1="1" y1="0" x2="0" y2="1">
+              <stop offset="0%" stopColor="hsl(215 50% 28%)" stopOpacity="0.18" />
+              <stop offset="100%" stopColor="hsl(215 50% 28%)" stopOpacity="0" />
+            </linearGradient>
+          </defs>
+          <polygon points="400,0 400,180 280,40" fill="url(#shardTR)" />
+          <polygon points="400,60 400,220 320,90" fill="url(#shardTR)" opacity="0.7" />
+          <polygon points="360,0 400,0 400,120 300,20" fill="url(#shardTR)" opacity="0.5" />
+          <polygon points="400,140 400,260 340,160" fill="url(#shardTR)" opacity="0.6" />
+        </svg>
+      </div>
 
-      {/* Bottom icy glow */}
-      <div className="absolute -bottom-20 right-1/4 w-96 h-96 rounded-full blur-3xl bg-sky-400/25" />
-
-      {/* Frost crystals / snowflakes (subtle SVG sparkles) */}
-      <svg className="absolute top-12 right-[30%] w-6 h-6 text-white/80 drop-shadow-[0_0_8px_rgba(255,255,255,0.9)]" viewBox="0 0 24 24" fill="currentColor">
-        <path d="M12 2v20M2 12h20M4.93 4.93l14.14 14.14M19.07 4.93L4.93 19.07" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/>
-      </svg>
-      <svg className="absolute top-1/3 right-[8%] w-4 h-4 text-cyan-100/90 drop-shadow-[0_0_6px_rgba(207,250,254,0.9)]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round">
-        <path d="M12 2v20M2 12h20M4.93 4.93l14.14 14.14M19.07 4.93L4.93 19.07"/>
-      </svg>
-      <svg className="absolute bottom-20 right-[40%] w-5 h-5 text-white/70 drop-shadow-[0_0_8px_rgba(255,255,255,0.8)]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round">
-        <path d="M12 2v20M2 12h20M4.93 4.93l14.14 14.14M19.07 4.93L4.93 19.07"/>
-      </svg>
-      <svg className="absolute top-2/3 right-[20%] w-3 h-3 text-cyan-50/80 drop-shadow-[0_0_5px_rgba(236,254,255,0.9)]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round">
-        <path d="M12 2v20M2 12h20M4.93 4.93l14.14 14.14M19.07 4.93L4.93 19.07"/>
-      </svg>
-      <svg className="absolute top-24 right-[55%] w-4 h-4 text-white/60 drop-shadow-[0_0_6px_rgba(255,255,255,0.7)]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round">
-        <path d="M12 2v20M2 12h20M4.93 4.93l14.14 14.14M19.07 4.93L4.93 19.07"/>
-      </svg>
-
-      {/* Tiny ice particles */}
-      <div className="absolute top-20 right-[22%] w-1.5 h-1.5 rounded-full bg-white shadow-[0_0_10px_rgba(255,255,255,1)]" />
-      <div className="absolute top-1/2 right-[35%] w-1 h-1 rounded-full bg-cyan-100 shadow-[0_0_8px_rgba(207,250,254,1)]" />
-      <div className="absolute bottom-32 right-[18%] w-1.5 h-1.5 rounded-full bg-white shadow-[0_0_10px_rgba(255,255,255,1)]" />
-      <div className="absolute top-40 right-[50%] w-1 h-1 rounded-full bg-sky-100 shadow-[0_0_8px_rgba(224,242,254,1)]" />
+      {/* Bottom-left corner: navy ice shards (confined, fading inward) */}
+      <div
+        className="pointer-events-none absolute bottom-0 left-0 w-[32%] h-[45%]"
+        style={{
+          maskImage:
+            "radial-gradient(ellipse 100% 100% at 0% 100%, black 0%, black 25%, transparent 70%)",
+          WebkitMaskImage:
+            "radial-gradient(ellipse 100% 100% at 0% 100%, black 0%, black 25%, transparent 70%)",
+        }}
+      >
+        <svg viewBox="0 0 400 400" className="w-full h-full" preserveAspectRatio="none">
+          <defs>
+            <linearGradient id="shardBL" x1="0" y1="1" x2="1" y2="0">
+              <stop offset="0%" stopColor="hsl(215 45% 30%)" stopOpacity="0.14" />
+              <stop offset="100%" stopColor="hsl(215 45% 30%)" stopOpacity="0" />
+            </linearGradient>
+          </defs>
+          <polygon points="0,400 0,240 140,400" fill="url(#shardBL)" />
+          <polygon points="0,340 0,400 90,400" fill="url(#shardBL)" opacity="0.7" />
+          <polygon points="0,400 0,300 180,400" fill="url(#shardBL)" opacity="0.5" />
+        </svg>
+      </div>
 
       <div className="relative content-container py-8 lg:py-10">
         <div className="grid lg:grid-cols-2 gap-8 lg:gap-10 items-center">
