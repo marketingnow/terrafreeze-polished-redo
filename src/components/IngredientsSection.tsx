@@ -77,40 +77,85 @@ const IngredientsSection = () => {
 
           {/* 6 Ingredient Cards - 3x2 Grid */}
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-10">
-            {ingredients.map((ingredient, index) => (
-              <Card key={index} className="glass-card p-6 flex flex-col h-full hover:shadow-elevated transition-all duration-300">
-                {/* Category Badge */}
-                <div className="mb-4">
-                  <span className="inline-block px-3 py-1 bg-primary text-primary-foreground text-xs font-bold rounded uppercase tracking-wide">
-                    {ingredient.category}
-                  </span>
-                </div>
+            {ingredients.map((ingredient, index) => {
+              const isFeatured = index === 0;
 
-                {/* Ingredient Name */}
-                <h3 className="font-heading text-xl font-bold text-foreground mb-3">
-                  {ingredient.name}
-                </h3>
-
-                {/* Description */}
-                <p className="text-muted-foreground text-sm leading-relaxed flex-grow mb-6">
-                  {ingredient.description}
-                </p>
-
-                {/* Bottom section with badge and image */}
-                <div className="flex items-end justify-between mt-auto">
-                  <span className={`text-primary text-sm font-medium`}>
-                    {ingredient.badge}
-                  </span>
-                  <div className="w-20 h-20 rounded-full overflow-hidden flex-shrink-0">
-                    <img 
-                      src={ingredient.image} 
+              if (isFeatured) {
+                return (
+                  <Card
+                    key={index}
+                    className="relative overflow-hidden p-6 flex flex-col h-full hover:shadow-elevated transition-all duration-300 border-0"
+                  >
+                    {/* Background image */}
+                    <img
+                      src={ingredient.image}
                       alt={ingredient.name}
-                      className="w-full h-full object-cover"
+                      className="absolute inset-0 w-full h-full object-cover"
                     />
+                    {/* Readability overlay */}
+                    <div className="absolute inset-0 bg-gradient-to-t from-background/95 via-background/80 to-background/40" />
+
+                    {/* Content */}
+                    <div className="relative flex flex-col h-full">
+                      <div className="mb-4">
+                        <span className="inline-block px-3 py-1 bg-primary text-primary-foreground text-xs font-bold rounded uppercase tracking-wide">
+                          {ingredient.category}
+                        </span>
+                      </div>
+
+                      <h3 className="font-heading text-xl font-bold text-foreground mb-3 drop-shadow-sm">
+                        {ingredient.name}
+                      </h3>
+
+                      <p className="text-foreground/90 text-sm leading-relaxed flex-grow mb-6 font-medium">
+                        {ingredient.description}
+                      </p>
+
+                      <div className="mt-auto">
+                        <span className="text-primary text-sm font-semibold">
+                          {ingredient.badge}
+                        </span>
+                      </div>
+                    </div>
+                  </Card>
+                );
+              }
+
+              return (
+                <Card key={index} className="glass-card p-6 flex flex-col h-full hover:shadow-elevated transition-all duration-300">
+                  {/* Category Badge */}
+                  <div className="mb-4">
+                    <span className="inline-block px-3 py-1 bg-primary text-primary-foreground text-xs font-bold rounded uppercase tracking-wide">
+                      {ingredient.category}
+                    </span>
                   </div>
-                </div>
-              </Card>
-            ))}
+
+                  {/* Ingredient Name */}
+                  <h3 className="font-heading text-xl font-bold text-foreground mb-3">
+                    {ingredient.name}
+                  </h3>
+
+                  {/* Description */}
+                  <p className="text-muted-foreground text-sm leading-relaxed flex-grow mb-6">
+                    {ingredient.description}
+                  </p>
+
+                  {/* Bottom section with badge and image */}
+                  <div className="flex items-end justify-between mt-auto">
+                    <span className={`text-primary text-sm font-medium`}>
+                      {ingredient.badge}
+                    </span>
+                    <div className="w-20 h-20 rounded-full overflow-hidden flex-shrink-0">
+                      <img
+                        src={ingredient.image}
+                        alt={ingredient.name}
+                        className="w-full h-full object-cover"
+                      />
+                    </div>
+                  </div>
+                </Card>
+              );
+            })}
           </div>
         </div>
       </div>
