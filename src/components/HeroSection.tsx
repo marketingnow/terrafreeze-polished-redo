@@ -126,7 +126,7 @@ const HeroSection = () => {
           <div className="inline-flex items-center gap-2 mb-4">
             <div className="flex">
               {[...Array(5)].map((_, i) => (
-                <Star key={i} className="w-4 h-4 fill-amber-400 text-amber-400" />
+                <Star key={i} strokeWidth={0} className="w-4 h-4 fill-amber-500 text-amber-500" />
               ))}
             </div>
             <span className="text-sm font-medium text-foreground">
@@ -150,7 +150,7 @@ const HeroSection = () => {
             <div className="hidden lg:inline-flex items-center gap-2 mb-4">
               <div className="flex">
                 {[...Array(5)].map((_, i) => (
-                  <Star key={i} className="w-4 h-4 fill-amber-400 text-amber-400" />
+                  <Star key={i} strokeWidth={0} className="w-4 h-4 fill-amber-500 text-amber-500" />
                 ))}
               </div>
               <span className="text-sm font-medium text-foreground">
@@ -207,7 +207,7 @@ const HeroSection = () => {
               <div className="hidden lg:block absolute -top-2 -left-2 lg:-left-6 z-20 glass-card rounded-lg p-3 max-w-[220px] animate-float">
                 <div className="flex items-center gap-0.5 mb-1.5">
                   {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="w-3.5 h-3.5 fill-amber-400 text-amber-400" />
+                    <Star key={i} strokeWidth={0} className="w-3.5 h-3.5 fill-amber-500 text-amber-500" />
                   ))}
                 </div>
                 <p className="text-xs text-foreground leading-snug italic">
