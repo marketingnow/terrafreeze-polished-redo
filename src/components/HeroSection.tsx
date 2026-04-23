@@ -1,4 +1,4 @@
-import { Star, Check, ArrowRight, FlaskConical, Stethoscope } from "lucide-react";
+import { Star, Check, ArrowRight } from "lucide-react";
 import productImage from "@/assets/product.png";
 
 const HeroSection = () => {
@@ -65,21 +65,13 @@ const HeroSection = () => {
             {/* CTA Button - tight to bullets */}
             <div className="flex flex-col gap-4 items-stretch">
               <a href="#buy" className="btn-primary group w-full justify-center text-lg sm:text-xl py-5 px-6 flex items-center">
-                Try It Risk-Free Today
+                TRY TERRAFREEZE NOW
                 <ArrowRight className="w-6 h-6 ml-2 group-hover:translate-x-1 transition-transform" />
               </a>
 
-              {/* Trust badges */}
-              <div className="flex flex-wrap gap-3">
-                <div className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-primary/5 border border-primary/10">
-                  <FlaskConical className="w-3.5 h-3.5 text-primary" />
-                  <span className="text-xs font-medium text-foreground">Clinically Tested Formula</span>
-                </div>
-                <div className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-primary/5 border border-primary/10">
-                  <Stethoscope className="w-3.5 h-3.5 text-primary" />
-                  <span className="text-xs font-medium text-foreground">Recommended by Physical Therapists</span>
-                </div>
-              </div>
+              <p className="text-sm text-muted-foreground text-center">
+                Try Now Risk Free • 100% Money Back Guarantee
+              </p>
 
             </div>
           </div>
