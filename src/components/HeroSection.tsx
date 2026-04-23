@@ -123,7 +123,7 @@ const HeroSection = () => {
       <div className="relative content-container py-8 lg:py-10">
         {/* MOBILE-ONLY: rating + headline above image */}
         <div className="lg:hidden mb-6">
-          <div className="inline-flex items-center gap-2 mb-4 px-3 py-1.5 bg-amber-50 rounded-full border border-amber-200/50">
+          <div className="inline-flex items-center gap-2 mb-4">
             <div className="flex">
               {[...Array(5)].map((_, i) => (
                 <Star key={i} className="w-4 h-4 fill-amber-400 text-amber-400" />
@@ -147,7 +147,7 @@ const HeroSection = () => {
           {/* Left Content (desktop) / Below image (mobile) */}
           <div className="order-2 lg:order-1 stagger-children">
             {/* Rating badge - desktop only */}
-            <div className="hidden lg:inline-flex items-center gap-2 mb-4 px-3 py-1.5 bg-amber-50 rounded-full border border-amber-200/50">
+            <div className="hidden lg:inline-flex items-center gap-2 mb-4">
               <div className="flex">
                 {[...Array(5)].map((_, i) => (
                   <Star key={i} className="w-4 h-4 fill-amber-400 text-amber-400" />
