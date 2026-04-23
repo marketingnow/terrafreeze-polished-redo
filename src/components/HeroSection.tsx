@@ -63,10 +63,10 @@ const HeroSection = () => {
             </ul>
 
             {/* CTA Button - tight to bullets */}
-            <div className="flex flex-col gap-4 items-start">
-              <a href="#buy" className="btn-primary group">
+            <div className="flex flex-col gap-4 items-stretch">
+              <a href="#buy" className="btn-primary group w-full justify-center text-lg sm:text-xl py-5 px-6 flex items-center">
                 Try It Risk-Free Today
-                <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+                <ArrowRight className="w-6 h-6 ml-2 group-hover:translate-x-1 transition-transform" />
               </a>
 
               {/* Trust badges */}
