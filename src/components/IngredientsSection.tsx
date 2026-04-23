@@ -1,5 +1,6 @@
 import { Card } from "@/components/ui/card";
 import emuOilImage from "@/assets/ingredient-emu-oil.jpg";
+import arnicaImage from "@/assets/ingredient-arnica.jpg";
 
 const ingredients = [
   {
@@ -16,7 +17,7 @@ const ingredients = [
     description: "Powerful natural herb that reduces inflammation and bruising at the cellular level. Less swelling, faster healing, and relief that lasts for hours.",
     badge: "Used for 500+ years",
     badgeColor: "bg-green-600",
-    image: "https://terrafreeze.com/wp-content/uploads/2024/09/terrafreeze_4.png"
+    image: arnicaImage
   },
   {
     category: "JOINT SUPPORT",
@@ -79,7 +80,7 @@ const IngredientsSection = () => {
           {/* 6 Ingredient Cards - 3x2 Grid */}
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-10">
             {ingredients.map((ingredient, index) => {
-              const isFeatured = index === 0;
+              const isFeatured = index === 0 || index === 1;
 
               if (isFeatured) {
                 return (
