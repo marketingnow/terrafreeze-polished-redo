@@ -130,7 +130,7 @@ const HeroSection = () => {
               ))}
             </div>
             <span className="text-sm font-medium text-foreground">
-              538,000+ People Already Pain-Free
+              538,000+ Pain Free Adults And Counting
             </span>
           </div>
 
@@ -154,7 +154,7 @@ const HeroSection = () => {
                 ))}
               </div>
               <span className="text-sm font-medium text-foreground">
-                538,000+ People Already Pain-Free
+                538,000+ Pain Free Adults And Counting
               </span>
             </div>
 
