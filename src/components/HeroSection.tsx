@@ -1,4 +1,4 @@
-import { Star, ArrowRight } from "lucide-react";
+import { Star, Check, ArrowRight } from "lucide-react";
 import productImage from "@/assets/product.png";
 
 const HeroSection = () => {
