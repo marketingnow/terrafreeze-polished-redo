@@ -7,31 +7,31 @@ const packages = [
     id: 1,
     jars: 1,
     label: "Try It",
-    originalPrice: 99.99,
-    price: 89.99,
-    perJar: 89.99,
+    originalPrice: 49.95,
+    price: 29.95,
+    perJar: 29.95,
     popular: false,
-    cartUrl: "https://terrafreeze.com/?add-to-cart=35086"
+    cartUrl: "https://terrafreeze.com/checkout/?add-to-cart=19140&variation_id=32168"
   },
   {
     id: 3,
     jars: 3,
     label: "Best Value",
-    originalPrice: 299.97,
-    price: 199.99,
-    perJar: 66.66,
+    originalPrice: 149.85,
+    price: 69.95,
+    perJar: 23.32,
     popular: true,
-    cartUrl: "https://terrafreeze.com/?add-to-cart=19137"
+    cartUrl: "https://terrafreeze.com/checkout/?add-to-cart=19140&variation_id=32169"
   },
   {
     id: 6,
     jars: 6,
     label: "Maximum Savings",
-    originalPrice: 599.94,
-    price: 349.99,
-    perJar: 58.33,
+    originalPrice: 299.70,
+    price: 119.00,
+    perJar: 19.83,
     popular: false,
-    cartUrl: "https://terrafreeze.com/?add-to-cart=19138"
+    cartUrl: "https://terrafreeze.com/checkout/?add-to-cart=19140&variation_id=32170"
   }
 ];
 
@@ -176,7 +176,7 @@ const ProductPurchaseSection = () => {
                 href={selected.cartUrl}
                 className="btn-primary w-full text-base py-4 mb-4 block text-center"
               >
-                Add to Cart — Get Relief Today
+                Add to Cart — ${selected.price.toFixed(2)}
               </a>
 
               {/* Trust indicators */}
