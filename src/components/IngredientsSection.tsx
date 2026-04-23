@@ -84,7 +84,7 @@ const IngredientsSection = () => {
                 return (
                   <Card
                     key={index}
-                    className="relative overflow-hidden p-6 flex flex-col h-full hover:shadow-elevated transition-all duration-300 border-0"
+                    className="relative overflow-hidden rounded-2xl flex flex-col h-full min-h-[280px] hover:shadow-elevated transition-all duration-300 border-0 p-0"
                   >
                     {/* Background image */}
                     <img
@@ -92,27 +92,22 @@ const IngredientsSection = () => {
                       alt={ingredient.name}
                       className="absolute inset-0 w-full h-full object-cover"
                     />
-                    {/* Readability overlay */}
-                    <div className="absolute inset-0 bg-gradient-to-t from-background/95 via-background/80 to-background/40" />
+                    {/* Subtle darkening for text legibility */}
+                    <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/40 to-black/20" />
 
                     {/* Content */}
-                    <div className="relative flex flex-col h-full">
-                      <div className="mb-4">
-                        <span className="inline-block px-3 py-1 bg-primary text-primary-foreground text-xs font-bold rounded uppercase tracking-wide">
-                          {ingredient.category}
-                        </span>
-                      </div>
-
-                      <h3 className="font-heading text-xl font-bold text-foreground mb-3 drop-shadow-sm">
+                    <div className="relative flex flex-col h-full p-7">
+                      <h3 className="font-heading text-3xl lg:text-4xl font-bold text-white mb-3 leading-tight">
                         {ingredient.name}
                       </h3>
 
-                      <p className="text-foreground/90 text-sm leading-relaxed flex-grow mb-6 font-medium">
+                      <p className="text-white/90 text-sm lg:text-base leading-relaxed font-medium max-w-[75%]">
                         {ingredient.description}
                       </p>
 
-                      <div className="mt-auto">
-                        <span className="text-primary text-sm font-semibold">
+                      {/* Pill badge bottom-right */}
+                      <div className="absolute bottom-5 right-5">
+                        <span className="inline-block px-4 py-1.5 bg-white text-foreground text-xs font-mono rounded-full shadow-md">
                           {ingredient.badge}
                         </span>
                       </div>
