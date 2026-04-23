@@ -81,11 +81,6 @@ const HeroSection = () => {
                 </div>
               </div>
 
-              {/* Stock indicator */}
-              <div className="flex items-center gap-2">
-                <div className="w-1.5 h-1.5 rounded-full bg-green-500 animate-pulse" />
-                <span className="text-xs font-medium text-muted-foreground">In Stock • Ships Today</span>
-              </div>
             </div>
           </div>
 
