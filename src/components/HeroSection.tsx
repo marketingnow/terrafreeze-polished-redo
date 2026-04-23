@@ -1,4 +1,4 @@
-import { Star, Check, ArrowRight } from "lucide-react";
+import { Star, Check, ArrowRight, FlaskConical, Stethoscope } from "lucide-react";
 import productImage from "@/assets/product.png";
 
 const HeroSection = () => {
@@ -29,29 +29,29 @@ const HeroSection = () => {
                 ))}
               </div>
               <span className="text-sm font-medium text-foreground">
-                4.8/5 Rated by Real Customers
+                538,000+ People Already Pain-Free
               </span>
             </div>
 
             {/* Headline - dominant */}
             <h1 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground leading-[1.1] mb-5">
-              Fast-Acting Pain Relief —{" "}
+              Finally Move Without Pain —{" "}
               <span className="gradient-text">
-                Without Pills, Prescriptions, or Waiting
+                Without Pills, Prescriptions, or Doctor Visits
               </span>
             </h1>
 
             {/* Subheadline - tighter */}
             <p className="text-base lg:text-lg text-muted-foreground leading-relaxed mb-6 max-w-lg">
-              Target muscle, joint, and inflammation pain in minutes with a cooling-then-soothing cream designed for daily use.
+              One small dab. 60 seconds. Hours of relief. Non-greasy, no smell, no mess.
             </p>
 
             {/* Bullet points - compact */}
             <ul className="space-y-2.5 mb-8">
               {[
-                "Works on sore muscles, stiff joints, and inflammation",
-                "Non-greasy • No harsh smell • Easy daily use",
-                "Trusted by active adults and chronic pain sufferers",
+                "Works on arthritis, joint pain, muscle aches, and inflammation",
+                "FDA Registered • Ships from the USA",
+                "Recommended by physical therapists and clinical pain specialists",
               ].map((point, i) => (
                 <li key={i} className="flex items-start gap-2.5">
                   <span className="flex-shrink-0 w-5 h-5 rounded-full bg-primary/10 flex items-center justify-center mt-0.5">
@@ -63,14 +63,29 @@ const HeroSection = () => {
             </ul>
 
             {/* CTA Button - tight to bullets */}
-            <div className="flex flex-col sm:flex-row gap-3 items-start">
+            <div className="flex flex-col gap-4 items-start">
               <a href="#buy" className="btn-primary group">
-                Get Relief Now
+                Try It Risk-Free Today
                 <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
               </a>
-              <p className="text-xs text-muted-foreground self-center">
-                Free shipping • 60-day guarantee
-              </p>
+
+              {/* Trust badges */}
+              <div className="flex flex-wrap gap-3">
+                <div className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-primary/5 border border-primary/10">
+                  <FlaskConical className="w-3.5 h-3.5 text-primary" />
+                  <span className="text-xs font-medium text-foreground">Clinically Tested Formula</span>
+                </div>
+                <div className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-primary/5 border border-primary/10">
+                  <Stethoscope className="w-3.5 h-3.5 text-primary" />
+                  <span className="text-xs font-medium text-foreground">Recommended by Physical Therapists</span>
+                </div>
+              </div>
+
+              {/* Stock indicator */}
+              <div className="flex items-center gap-2">
+                <div className="w-1.5 h-1.5 rounded-full bg-green-500 animate-pulse" />
+                <span className="text-xs font-medium text-muted-foreground">In Stock • Ships Today</span>
+              </div>
             </div>
           </div>
 
@@ -106,13 +121,6 @@ const HeroSection = () => {
                 />
               </div>
 
-              {/* Bottom badge */}
-              <div className="absolute -bottom-3 right-2 lg:right-0 glass-card rounded-lg px-3 py-1.5">
-                <div className="flex items-center gap-2">
-                  <div className="w-1.5 h-1.5 rounded-full bg-green-500 animate-pulse" />
-                  <span className="text-xs font-medium text-foreground">In Stock • Ships Today</span>
-                </div>
-              </div>
             </div>
           </div>
         </div>
