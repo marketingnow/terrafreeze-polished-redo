@@ -189,7 +189,7 @@ const HeroSection = () => {
 
             {/* CTA Button */}
             <div className="flex flex-col gap-2 items-stretch">
-              <a href="#buy" className="btn-primary group w-full justify-center text-base sm:text-lg py-4 px-6 flex items-center">
+              <a href="#buy" className="btn-primary group w-full justify-center py-4 px-6 flex items-center rounded-xl" style={{ fontSize: "25px" }}>
                 TRY TERRAFREEZE NOW
                 <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
               </a>
