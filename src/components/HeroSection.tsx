@@ -4,17 +4,35 @@ import productImage from "@/assets/product.png";
 const HeroSection = () => {
   return (
     <section className="relative overflow-hidden">
-      {/* Background gradient */}
-      <div 
+      {/* Split background: soft grey left, icy blue gradient right */}
+      <div
         className="absolute inset-0"
         style={{
-          background: "linear-gradient(135deg, hsl(200 70% 97%) 0%, hsl(210 30% 98%) 50%, hsl(0 0% 100%) 100%)"
+          background:
+            "linear-gradient(90deg, hsl(210 15% 94%) 0%, hsl(210 20% 95%) 45%, hsl(200 75% 92%) 70%, hsl(195 85% 88%) 100%)",
         }}
       />
-      
-      {/* Subtle decorative elements */}
-      <div className="absolute top-20 right-1/4 w-72 h-72 bg-primary/5 rounded-full blur-3xl" />
-      <div className="absolute bottom-0 left-0 w-64 h-64 bg-primary/3 rounded-full blur-3xl" />
+
+      {/* Icy radial glow behind product (right side) */}
+      <div
+        className="absolute top-1/2 right-[15%] -translate-y-1/2 w-[520px] h-[520px] rounded-full blur-3xl opacity-70"
+        style={{
+          background:
+            "radial-gradient(circle, hsl(195 95% 80% / 0.55) 0%, hsl(200 90% 85% / 0.25) 45%, transparent 70%)",
+        }}
+      />
+
+      {/* Frosty highlight top-right */}
+      <div className="absolute -top-20 right-0 w-96 h-96 rounded-full blur-3xl bg-cyan-200/30" />
+
+      {/* Subtle frost particles */}
+      <div className="absolute top-16 right-[28%] w-2 h-2 rounded-full bg-white/80 shadow-[0_0_12px_rgba(255,255,255,0.9)]" />
+      <div className="absolute top-1/3 right-[12%] w-1.5 h-1.5 rounded-full bg-white/70 shadow-[0_0_10px_rgba(255,255,255,0.8)]" />
+      <div className="absolute bottom-24 right-[35%] w-1 h-1 rounded-full bg-white/60 shadow-[0_0_8px_rgba(255,255,255,0.7)]" />
+      <div className="absolute top-1/2 right-[45%] w-1.5 h-1.5 rounded-full bg-cyan-100/80 shadow-[0_0_10px_rgba(165,243,252,0.9)]" />
+
+      {/* Soft divider glow between halves */}
+      <div className="absolute inset-y-0 left-1/2 w-px bg-gradient-to-b from-transparent via-white/40 to-transparent" />
 
       <div className="relative content-container py-8 lg:py-10">
         <div className="grid lg:grid-cols-2 gap-8 lg:gap-10 items-center">
