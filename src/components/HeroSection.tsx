@@ -121,12 +121,33 @@ const HeroSection = () => {
       </div>
 
       <div className="relative content-container py-8 lg:py-10">
+        {/* MOBILE-ONLY: rating + headline above image */}
+        <div className="lg:hidden mb-6">
+          <div className="inline-flex items-center gap-2 mb-4 px-3 py-1.5 bg-amber-50 rounded-full border border-amber-200/50">
+            <div className="flex">
+              {[...Array(5)].map((_, i) => (
+                <Star key={i} className="w-4 h-4 fill-amber-400 text-amber-400" />
+              ))}
+            </div>
+            <span className="text-sm font-medium text-foreground">
+              538,000+ People Already Pain-Free
+            </span>
+          </div>
+
+          <h1 className="font-heading text-3xl sm:text-4xl font-bold text-foreground leading-[1.1]">
+            Finally Move Without Pain —{" "}
+            <span className="gradient-text">
+              Without Pills, Prescriptions, or Doctor Visits
+            </span>
+          </h1>
+        </div>
+
         <div className="grid lg:grid-cols-2 gap-8 lg:gap-10 items-center">
-          
-          {/* Left Content */}
+
+          {/* Left Content (desktop) / Below image (mobile) */}
           <div className="order-2 lg:order-1 stagger-children">
-            {/* Rating badge */}
-            <div className="inline-flex items-center gap-2 mb-4 px-3 py-1.5 bg-amber-50 rounded-full border border-amber-200/50">
+            {/* Rating badge - desktop only */}
+            <div className="hidden lg:inline-flex items-center gap-2 mb-4 px-3 py-1.5 bg-amber-50 rounded-full border border-amber-200/50">
               <div className="flex">
                 {[...Array(5)].map((_, i) => (
                   <Star key={i} className="w-4 h-4 fill-amber-400 text-amber-400" />
@@ -137,8 +158,8 @@ const HeroSection = () => {
               </span>
             </div>
 
-            {/* Headline */}
-            <h1 className="font-heading text-2xl sm:text-3xl lg:text-4xl font-bold text-foreground leading-[1.1] mb-3">
+            {/* Headline - desktop only */}
+            <h1 className="hidden lg:block font-heading text-2xl sm:text-3xl lg:text-4xl font-bold text-foreground leading-[1.1] mb-3">
               Finally Move Without Pain —{" "}
               <span className="gradient-text">
                 Without Pills, Prescriptions, or Doctor Visits
@@ -181,10 +202,9 @@ const HeroSection = () => {
 
           {/* Right Content - Product Image */}
           <div className="order-1 lg:order-2 relative">
-            {/* Glass container for product */}
             <div className="relative mx-auto max-w-sm lg:max-w-md">
-              {/* Floating testimonial - positioned top left */}
-              <div className="absolute -top-2 -left-2 lg:-left-6 z-20 glass-card rounded-lg p-3 max-w-[220px] animate-float">
+              {/* Floating testimonial - desktop only */}
+              <div className="hidden lg:block absolute -top-2 -left-2 lg:-left-6 z-20 glass-card rounded-lg p-3 max-w-[220px] animate-float">
                 <div className="flex items-center gap-0.5 mb-1.5">
                   {[...Array(5)].map((_, i) => (
                     <Star key={i} className="w-3.5 h-3.5 fill-amber-400 text-amber-400" />
@@ -197,7 +217,7 @@ const HeroSection = () => {
               </div>
 
               {/* Product glass container */}
-              <div 
+              <div
                 className="relative rounded-2xl p-6 lg:p-8"
                 style={{
                   background: "linear-gradient(145deg, rgba(255,255,255,0.9) 0%, rgba(255,255,255,0.6) 100%)",
