@@ -4,35 +4,61 @@ import productImage from "@/assets/product.png";
 const HeroSection = () => {
   return (
     <section className="relative overflow-hidden">
-      {/* Split background: soft grey left, icy blue gradient right */}
+      {/* Split background: cool grey left, deep icy blue right */}
       <div
         className="absolute inset-0"
         style={{
           background:
-            "linear-gradient(90deg, hsl(210 15% 94%) 0%, hsl(210 20% 95%) 45%, hsl(200 75% 92%) 70%, hsl(195 85% 88%) 100%)",
+            "linear-gradient(90deg, hsl(210 12% 90%) 0%, hsl(210 18% 92%) 40%, hsl(200 70% 82%) 65%, hsl(195 85% 70%) 100%)",
         }}
       />
 
-      {/* Icy radial glow behind product (right side) */}
+      {/* Icy frost overlay on right side */}
       <div
-        className="absolute top-1/2 right-[15%] -translate-y-1/2 w-[520px] h-[520px] rounded-full blur-3xl opacity-70"
+        className="absolute inset-0"
         style={{
           background:
-            "radial-gradient(circle, hsl(195 95% 80% / 0.55) 0%, hsl(200 90% 85% / 0.25) 45%, transparent 70%)",
+            "radial-gradient(ellipse 70% 90% at 85% 50%, hsl(190 100% 75% / 0.55) 0%, hsl(195 95% 80% / 0.3) 35%, transparent 65%)",
         }}
       />
 
-      {/* Frosty highlight top-right */}
-      <div className="absolute -top-20 right-0 w-96 h-96 rounded-full blur-3xl bg-cyan-200/30" />
+      {/* Bright icy glow behind product */}
+      <div
+        className="absolute top-1/2 right-[12%] -translate-y-1/2 w-[600px] h-[600px] rounded-full blur-3xl"
+        style={{
+          background:
+            "radial-gradient(circle, hsl(185 100% 85% / 0.85) 0%, hsl(195 95% 75% / 0.45) 40%, transparent 70%)",
+        }}
+      />
 
-      {/* Subtle frost particles */}
-      <div className="absolute top-16 right-[28%] w-2 h-2 rounded-full bg-white/80 shadow-[0_0_12px_rgba(255,255,255,0.9)]" />
-      <div className="absolute top-1/3 right-[12%] w-1.5 h-1.5 rounded-full bg-white/70 shadow-[0_0_10px_rgba(255,255,255,0.8)]" />
-      <div className="absolute bottom-24 right-[35%] w-1 h-1 rounded-full bg-white/60 shadow-[0_0_8px_rgba(255,255,255,0.7)]" />
-      <div className="absolute top-1/2 right-[45%] w-1.5 h-1.5 rounded-full bg-cyan-100/80 shadow-[0_0_10px_rgba(165,243,252,0.9)]" />
+      {/* Top frost highlight */}
+      <div className="absolute -top-32 right-0 w-[500px] h-[500px] rounded-full blur-3xl bg-cyan-300/40" />
 
-      {/* Soft divider glow between halves */}
-      <div className="absolute inset-y-0 left-1/2 w-px bg-gradient-to-b from-transparent via-white/40 to-transparent" />
+      {/* Bottom icy glow */}
+      <div className="absolute -bottom-20 right-1/4 w-96 h-96 rounded-full blur-3xl bg-sky-400/25" />
+
+      {/* Frost crystals / snowflakes (subtle SVG sparkles) */}
+      <svg className="absolute top-12 right-[30%] w-6 h-6 text-white/80 drop-shadow-[0_0_8px_rgba(255,255,255,0.9)]" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M12 2v20M2 12h20M4.93 4.93l14.14 14.14M19.07 4.93L4.93 19.07" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/>
+      </svg>
+      <svg className="absolute top-1/3 right-[8%] w-4 h-4 text-cyan-100/90 drop-shadow-[0_0_6px_rgba(207,250,254,0.9)]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round">
+        <path d="M12 2v20M2 12h20M4.93 4.93l14.14 14.14M19.07 4.93L4.93 19.07"/>
+      </svg>
+      <svg className="absolute bottom-20 right-[40%] w-5 h-5 text-white/70 drop-shadow-[0_0_8px_rgba(255,255,255,0.8)]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round">
+        <path d="M12 2v20M2 12h20M4.93 4.93l14.14 14.14M19.07 4.93L4.93 19.07"/>
+      </svg>
+      <svg className="absolute top-2/3 right-[20%] w-3 h-3 text-cyan-50/80 drop-shadow-[0_0_5px_rgba(236,254,255,0.9)]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round">
+        <path d="M12 2v20M2 12h20M4.93 4.93l14.14 14.14M19.07 4.93L4.93 19.07"/>
+      </svg>
+      <svg className="absolute top-24 right-[55%] w-4 h-4 text-white/60 drop-shadow-[0_0_6px_rgba(255,255,255,0.7)]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round">
+        <path d="M12 2v20M2 12h20M4.93 4.93l14.14 14.14M19.07 4.93L4.93 19.07"/>
+      </svg>
+
+      {/* Tiny ice particles */}
+      <div className="absolute top-20 right-[22%] w-1.5 h-1.5 rounded-full bg-white shadow-[0_0_10px_rgba(255,255,255,1)]" />
+      <div className="absolute top-1/2 right-[35%] w-1 h-1 rounded-full bg-cyan-100 shadow-[0_0_8px_rgba(207,250,254,1)]" />
+      <div className="absolute bottom-32 right-[18%] w-1.5 h-1.5 rounded-full bg-white shadow-[0_0_10px_rgba(255,255,255,1)]" />
+      <div className="absolute top-40 right-[50%] w-1 h-1 rounded-full bg-sky-100 shadow-[0_0_8px_rgba(224,242,254,1)]" />
 
       <div className="relative content-container py-8 lg:py-10">
         <div className="grid lg:grid-cols-2 gap-8 lg:gap-10 items-center">
