@@ -84,17 +84,16 @@ const IngredientsSection = () => {
                 return (
                   <Card
                     key={index}
-                    className="relative overflow-hidden p-6 flex flex-col h-full min-h-[440px] hover:shadow-elevated transition-all duration-300 border-0 bg-secondary/30"
+                    className="relative overflow-hidden p-6 flex flex-col h-full hover:shadow-elevated transition-all duration-300 border-0"
                   >
-                    {/* Background image - contained, not cropped */}
+                    {/* Background image */}
                     <img
                       src={ingredient.image}
                       alt={ingredient.name}
-                      className="absolute inset-0 w-full h-full object-contain object-center p-4 opacity-90"
+                      className="absolute inset-0 w-full h-full object-cover"
                     />
-                    {/* Readability overlay - stronger so text is easy to read */}
-                    <div className="absolute inset-0 bg-background/70" />
-                    <div className="absolute inset-0 bg-gradient-to-t from-background via-background/85 to-background/60" />
+                    {/* Readability overlay */}
+                    <div className="absolute inset-0 bg-gradient-to-t from-background/95 via-background/80 to-background/40" />
 
                     {/* Content */}
                     <div className="relative flex flex-col h-full">
@@ -104,11 +103,11 @@ const IngredientsSection = () => {
                         </span>
                       </div>
 
-                      <h3 className="font-heading text-xl font-bold text-foreground mb-3">
+                      <h3 className="font-heading text-xl font-bold text-foreground mb-3 drop-shadow-sm">
                         {ingredient.name}
                       </h3>
 
-                      <p className="text-foreground text-sm leading-relaxed flex-grow mb-6 font-medium">
+                      <p className="text-foreground/90 text-sm leading-relaxed flex-grow mb-6 font-medium">
                         {ingredient.description}
                       </p>
 
