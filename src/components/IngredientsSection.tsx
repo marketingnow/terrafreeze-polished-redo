@@ -100,7 +100,7 @@ const IngredientsSection = () => {
                     {ingredient.name}
                   </h3>
 
-                  <p className="text-white text-base lg:text-lg leading-relaxed font-semibold max-w-[75%] drop-shadow-md">
+                  <p className="text-white text-base lg:text-lg leading-snug font-semibold max-w-[75%] drop-shadow-md">
                     {ingredient.description}
                   </p>
 
