@@ -113,7 +113,7 @@ const HeroSection = () => {
                 <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
               </a>
 
-              <p className="text-xs text-muted-foreground text-center">
+              <p className="text-sm text-black font-medium text-center">
                 Try Now Risk Free • 100% Money Back Guarantee
               </p>
             </div>
