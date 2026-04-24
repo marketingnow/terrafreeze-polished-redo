@@ -84,23 +84,21 @@ const ProductPurchaseSection = () => {
             {packages.map((pkg) => {
               const isSelected = selectedPackage === pkg.id;
               return (
-                <div key={pkg.id} className="relative pt-4">
-                  <div className="h-7 mb-1 flex items-center justify-center">
-                    {pkg.badge && (
-                      <div
-                        className={`px-3 py-1.5 text-xs font-bold tracking-wider rounded ${
-                          pkg.badge.tone === "dark"
-                            ? "bg-foreground text-background"
-                            : "bg-amber-400 text-foreground"
-                        }`}
-                      >
-                        {pkg.badge.label}
-                      </div>
-                    )}
-                  </div>
+                <div key={pkg.id} className="relative pt-3">
+                  {pkg.badge && (
+                    <div
+                      className={`absolute top-0 left-1/2 -translate-x-1/2 z-10 px-4 py-1.5 text-xs font-bold tracking-wider rounded-t-md ${
+                        pkg.badge.tone === "dark"
+                          ? "bg-foreground text-background"
+                          : "bg-amber-400 text-foreground"
+                      }`}
+                    >
+                      {pkg.badge.label}
+                    </div>
+                  )}
                   <button
                     onClick={() => setSelectedPackage(pkg.id)}
-                    className={`w-full h-full rounded-2xl border-2 p-5 sm:p-6 transition-all text-center ${
+                    className={`w-full h-full rounded-2xl rounded-tl-2xl rounded-tr-2xl border-2 p-5 sm:p-6 pt-7 transition-all text-center ${
                       isSelected
                         ? "border-foreground bg-orange-50/60"
                         : "border-border bg-card hover:border-foreground/40"
