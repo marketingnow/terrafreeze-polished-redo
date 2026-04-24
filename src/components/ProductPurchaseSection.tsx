@@ -90,7 +90,7 @@ const ProductPurchaseSection = () => {
                 <div key={pkg.id} className="relative pt-6 sm:pt-3">
                   {pkg.badge && (
                     <div
-                      className={`absolute top-0 left-1/2 -translate-x-1/2 z-10 px-2 sm:px-4 py-1 sm:py-1.5 text-[9px] sm:text-xs font-bold tracking-wider rounded-t-md whitespace-nowrap ${
+                      className={`font-heading absolute top-0 left-1/2 -translate-x-1/2 z-10 px-2 sm:px-4 py-1 sm:py-1.5 text-[9px] sm:text-xs font-bold tracking-wider rounded-t-md whitespace-nowrap ${
                         pkg.badge.tone === "dark"
                           ? "bg-foreground text-background"
                           : "bg-amber-400 text-foreground"
