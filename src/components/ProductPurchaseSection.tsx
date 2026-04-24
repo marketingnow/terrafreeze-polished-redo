@@ -21,7 +21,7 @@ const packages: PackageOption[] = [
   {
     id: 1,
     jars: 1,
-    title: "TERRAFREEZE 2oz Jar",
+    title: "1 Jar Starter",
     tagline: "Ideal for trial or occasional use.",
     pricePerJar: 29.95,
     totalPrice: 29.95,
@@ -32,7 +32,7 @@ const packages: PackageOption[] = [
   {
     id: 3,
     jars: 3,
-    title: "TERRAFREEZE 3-Pack",
+    title: "3 Package",
     tagline: "Perfect for ongoing relief.",
     pricePerJar: 23.32,
     totalPrice: 69.95,
@@ -44,7 +44,7 @@ const packages: PackageOption[] = [
   {
     id: 6,
     jars: 6,
-    title: "TERRAFREEZE 6-Pack",
+    title: "6 Package",
     tagline: "Maximum value for long-term relief.",
     pricePerJar: 19.83,
     totalPrice: 119.0,
