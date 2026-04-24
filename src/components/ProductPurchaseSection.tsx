@@ -168,19 +168,19 @@ const ProductPurchaseSection = () => {
           <div className="grid grid-cols-3 gap-4 mb-6 pt-2">
             <div className="flex flex-col items-center text-center gap-2">
               <Package className="w-6 h-6 text-foreground" strokeWidth={1.5} />
-              <span className="text-xs text-muted-foreground leading-tight">
+              <span className="font-heading text-xs text-muted-foreground leading-tight">
                 Free shipping on<br />orders $99+
               </span>
             </div>
             <div className="flex flex-col items-center text-center gap-2 border-x border-border">
               <Truck className="w-6 h-6 text-foreground" strokeWidth={1.5} />
-              <span className="text-xs text-muted-foreground leading-tight">
+              <span className="font-heading text-xs text-muted-foreground leading-tight">
                 4-7 Day<br />US Delivery
               </span>
             </div>
             <div className="flex flex-col items-center text-center gap-2">
               <RotateCcw className="w-6 h-6 text-foreground" strokeWidth={1.5} />
-              <span className="text-xs text-muted-foreground leading-tight">
+              <span className="font-heading text-xs text-muted-foreground leading-tight">
                 180-Day Money-<br />Back Guarantee
               </span>
             </div>
@@ -189,7 +189,7 @@ const ProductPurchaseSection = () => {
           {/* Selling fast banner */}
           <div className="bg-orange-50 border border-orange-200 rounded-xl px-4 py-3 flex items-center justify-center gap-2">
             <Flame className="w-5 h-5 text-orange-500" />
-            <span className="text-sm text-foreground">
+            <span className="font-heading text-sm text-foreground">
               Selling fast — <span className="font-semibold">363 orders in the last 24 hours!</span>
             </span>
           </div>
