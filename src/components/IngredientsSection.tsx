@@ -58,7 +58,7 @@ const IngredientsSection = () => {
         <div className="max-w-6xl mx-auto">
           {/* Section Badge */}
           <div className="flex justify-center mb-6">
-            <span className="inline-block px-4 py-1.5 bg-primary text-primary-foreground text-sm font-semibold rounded-full uppercase tracking-wide">
+            <span className="font-heading inline-block px-4 py-1.5 bg-primary text-primary-foreground text-sm font-semibold rounded-full uppercase tracking-wide">
               What's Inside
             </span>
           </div>
@@ -71,7 +71,7 @@ const IngredientsSection = () => {
           </div>
 
           {/* Subheadline */}
-          <p className="text-center text-muted-foreground max-w-3xl mx-auto mb-12 text-lg">
+          <p className="font-heading text-center text-muted-foreground max-w-3xl mx-auto mb-12 text-lg">
             We don't hide behind 30-ingredient labels. TERRAFREEZE™ contains only clinically-proven active ingredients, each one selected to deliver real pain relief from within.
           </p>
 
@@ -100,13 +100,13 @@ const IngredientsSection = () => {
                     {ingredient.name}
                   </h3>
 
-                  <p className="text-white text-base lg:text-lg leading-snug font-semibold max-w-[75%] drop-shadow-md">
+                  <p className="font-heading text-white text-base lg:text-lg leading-snug font-semibold max-w-[75%] drop-shadow-md">
                     {ingredient.description}
                   </p>
 
                   {/* Pill badge bottom-right */}
                   <div className="absolute bottom-5 right-5">
-                    <span className="inline-block px-4 py-1.5 bg-white text-foreground text-xs font-mono rounded-full shadow-md">
+                    <span className="font-heading inline-block px-4 py-1.5 bg-white text-foreground text-xs font-semibold rounded-full shadow-md">
                       {ingredient.badge}
                     </span>
                   </div>
