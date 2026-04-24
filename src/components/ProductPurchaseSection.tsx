@@ -109,17 +109,20 @@ const ProductPurchaseSection = () => {
                         className="h-full object-contain"
                       />
                     </div>
-                    <p className="font-heading font-bold text-foreground text-base">
-                      {pkg.jars} {pkg.jars === 1 ? "Jar" : "Jars"}
+                    <p className="font-heading font-bold text-foreground text-sm leading-tight">
+                      {pkg.title}
                     </p>
-                    <p className="text-foreground text-sm mt-1 font-semibold">
-                      ${pkg.totalPrice.toFixed(2)}
+                    <p className="text-muted-foreground text-xs mt-1 leading-snug min-h-[32px]">
+                      {pkg.tagline}
                     </p>
-                    {pkg.jars > 1 && (
-                      <p className="text-[11px] font-bold text-emerald-600 mt-0.5">
-                        Save ${(pkg.jars * 29.95 - pkg.totalPrice).toFixed(2)}
-                      </p>
-                    )}
+                    <div className="flex items-baseline justify-center gap-1.5 mt-2">
+                      <span className="text-xs text-muted-foreground line-through">
+                        ${(pkg.jars * 29.95).toFixed(2)}
+                      </span>
+                      <span className="text-primary font-bold text-base">
+                        ${pkg.totalPrice.toFixed(2)}
+                      </span>
+                    </div>
                   </button>
                 </div>
               );
