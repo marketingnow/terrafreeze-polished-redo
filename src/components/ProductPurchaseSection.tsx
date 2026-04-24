@@ -73,7 +73,7 @@ const ProductPurchaseSection = () => {
               </div>
               <span className="text-muted-foreground text-base sm:text-lg">538,000+ Pain Free Adults And Counting</span>
             </div>
-            <h2 className="font-heading text-4xl sm:text-5xl font-bold text-foreground mb-4">
+            <h2 className="font-heading text-3xl sm:text-5xl font-bold text-foreground mb-4 whitespace-nowrap">
               Stock up. Save more.
             </h2>
             <p className="text-muted-foreground text-lg sm:text-xl max-w-2xl mx-auto">
@@ -82,7 +82,7 @@ const ProductPurchaseSection = () => {
           </div>
 
           {/* Quantity Select */}
-          <p className="text-foreground text-xl mb-4 font-medium">Select quantity:</p>
+          <p className="text-foreground text-xl mb-4 font-medium text-center sm:text-left">Select quantity:</p>
           <div className="grid grid-cols-3 gap-2 sm:gap-5 mb-10 items-stretch">
             {packages.map((pkg) => {
               const isSelected = selectedPackage === pkg.id;
