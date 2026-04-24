@@ -46,7 +46,7 @@ const Navigation = () => {
               <a
                 key={link.label}
                 href={link.href}
-                className="text-sm font-medium text-foreground/70 hover:text-primary transition-colors duration-200"
+                className="font-heading text-sm font-medium text-foreground/70 hover:text-primary transition-colors duration-200"
               >
                 {link.label}
               </a>
@@ -60,7 +60,7 @@ const Navigation = () => {
             </button>
             <a
               href="#buy"
-              className="btn-primary !py-3 !px-6 text-sm"
+              className="btn-primary font-heading font-semibold !py-3 !px-6 text-sm"
             >
               Shop Now
             </a>
@@ -85,7 +85,7 @@ const Navigation = () => {
                   key={link.label}
                   href={link.href}
                   onClick={() => setIsMenuOpen(false)}
-                  className="text-base font-medium text-foreground/80 hover:text-primary transition-colors py-2"
+                  className="font-heading text-base font-medium text-foreground/80 hover:text-primary transition-colors py-2"
                 >
                   {link.label}
                 </a>
@@ -93,7 +93,7 @@ const Navigation = () => {
               <a
                 href="#buy"
                 onClick={() => setIsMenuOpen(false)}
-                className="btn-primary text-center mt-4"
+                className="btn-primary font-heading font-semibold text-center mt-4"
               >
                 Shop Now
               </a>

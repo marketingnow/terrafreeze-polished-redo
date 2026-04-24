@@ -129,7 +129,7 @@ const HeroSection = () => {
                 <Star key={i} strokeWidth={0} className="w-4 h-4 fill-amber-500 text-amber-500" />
               ))}
             </div>
-            <span className="text-sm font-medium text-foreground">
+            <span className="font-heading text-sm font-medium text-foreground">
               538,000+ Pain Free Adults And Counting
             </span>
           </div>
@@ -153,7 +153,7 @@ const HeroSection = () => {
                   <Star key={i} strokeWidth={0} className="w-4 h-4 fill-amber-500 text-amber-500" />
                 ))}
               </div>
-              <span className="text-sm font-medium text-foreground">
+              <span className="font-heading text-sm font-medium text-foreground">
                 538,000+ Pain Free Adults And Counting
               </span>
             </div>
@@ -167,7 +167,7 @@ const HeroSection = () => {
             </h1>
 
             {/* Subheadline */}
-            <p className="text-base lg:text-lg text-black font-medium leading-relaxed mb-4 max-w-lg">
+            <p className="font-heading text-base lg:text-lg text-black font-medium leading-relaxed mb-4 max-w-lg">
               One small dab. 60 seconds. Hours of relief. Non-greasy, no smell, no mess.
             </p>
 
@@ -182,19 +182,19 @@ const HeroSection = () => {
                   <span className="flex-shrink-0 w-5 h-5 rounded-full bg-primary/10 flex items-center justify-center mt-0.5">
                     <Check className="w-3 h-3 text-primary" />
                   </span>
-                  <span className="text-black font-medium text-base">{point}</span>
+                  <span className="font-heading text-black font-medium text-base">{point}</span>
                 </li>
               ))}
             </ul>
 
             {/* CTA Button */}
             <div className="flex flex-col gap-2 items-stretch">
-              <a href="#buy" className="btn-primary group w-full justify-center py-4 px-4 sm:px-6 flex items-center rounded-md text-lg sm:text-2xl whitespace-nowrap">
+              <a href="#buy" className="btn-primary group w-full justify-center py-4 px-4 sm:px-6 flex items-center rounded-md text-lg sm:text-2xl whitespace-nowrap font-heading font-bold">
                 TRY TERRAFREEZE NOW
                 <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
               </a>
 
-              <p className="text-sm text-black font-medium text-center">
+              <p className="font-heading text-sm text-black font-medium text-center">
                 Try Now Risk Free • 100% Money Back Guarantee
               </p>
             </div>
@@ -210,10 +210,10 @@ const HeroSection = () => {
                     <Star key={i} strokeWidth={0} className="w-3.5 h-3.5 fill-amber-500 text-amber-500" />
                   ))}
                 </div>
-                <p className="text-xs text-foreground leading-snug italic">
+                <p className="font-heading text-xs text-foreground leading-snug italic">
                   "Finally something that works on my knees without burning."
                 </p>
-                <p className="text-[10px] text-muted-foreground mt-1.5">— Verified Customer</p>
+                <p className="font-heading text-[10px] text-muted-foreground mt-1.5">— Verified Customer</p>
               </div>
 
               {/* Product glass container */}
