@@ -123,7 +123,7 @@ const HeroSection = () => {
       <div className="relative content-container py-8 lg:py-10">
         {/* MOBILE-ONLY: rating + headline above image */}
         <div className="lg:hidden mb-6">
-          <div className="inline-flex items-center gap-2 mb-4">
+          <div className="flex flex-col items-start gap-1.5 mb-4">
             <div className="flex">
               {[...Array(5)].map((_, i) => (
                 <Star key={i} strokeWidth={0} className="w-4 h-4 fill-amber-500 text-amber-500" />
