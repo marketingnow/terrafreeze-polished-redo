@@ -58,7 +58,7 @@ const IngredientsSection = () => {
         <div className="max-w-6xl mx-auto">
           {/* Section Badge */}
           <div className="flex justify-center mb-6">
-            <span className="inline-block px-4 py-1.5 bg-primary text-primary-foreground text-sm font-semibold rounded-full uppercase tracking-wide">
+            <span className="font-heading inline-block px-4 py-1.5 bg-primary text-primary-foreground text-sm font-semibold rounded-full uppercase tracking-wide">
               What's Inside
             </span>
           </div>
