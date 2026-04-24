@@ -210,10 +210,10 @@ const HeroSection = () => {
                     <Star key={i} strokeWidth={0} className="w-3.5 h-3.5 fill-amber-500 text-amber-500" />
                   ))}
                 </div>
-                <p className="text-xs text-foreground leading-snug italic">
+                <p className="font-heading text-xs text-foreground leading-snug italic">
                   "Finally something that works on my knees without burning."
                 </p>
-                <p className="text-[10px] text-muted-foreground mt-1.5">— Verified Customer</p>
+                <p className="font-heading text-[10px] text-muted-foreground mt-1.5">— Verified Customer</p>
               </div>
 
               {/* Product glass container */}
