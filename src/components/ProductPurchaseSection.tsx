@@ -66,8 +66,11 @@ const ProductPurchaseSection = () => {
           {/* Title + Reviews */}
           <div className="text-center mb-10">
             <h2 className="font-heading text-4xl sm:text-5xl font-bold text-foreground mb-4">
-              TERRAFREEZE™
+              Stock up. Save more.
             </h2>
+            <p className="text-muted-foreground text-lg sm:text-xl max-w-2xl mx-auto mb-5">
+              From workout soreness to everyday aches, TERRAFREEZE delivers fast, targeted relief the whole household can count on.
+            </p>
             <div className="flex items-center justify-center gap-2">
               <div className="flex gap-0.5">
                 {[...Array(5)].map((_, i) => (
