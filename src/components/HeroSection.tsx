@@ -123,7 +123,7 @@ const HeroSection = () => {
       <div className="relative content-container py-8 lg:py-10">
         {/* MOBILE-ONLY: rating + headline above image */}
         <div className="lg:hidden mb-6">
-          <div className="inline-flex items-center gap-2 mb-4">
+          <div className="flex flex-col items-start gap-1.5 mb-4">
             <div className="flex">
               {[...Array(5)].map((_, i) => (
                 <Star key={i} strokeWidth={0} className="w-4 h-4 fill-amber-500 text-amber-500" />
@@ -189,7 +189,7 @@ const HeroSection = () => {
 
             {/* CTA Button */}
             <div className="flex flex-col gap-2 items-stretch">
-              <a href="#buy" className="btn-primary group w-full justify-center py-4 px-6 flex items-center rounded-md" style={{ fontSize: "25px" }}>
+              <a href="#buy" className="btn-primary group w-full justify-center py-4 px-4 sm:px-6 flex items-center rounded-md text-lg sm:text-2xl whitespace-nowrap">
                 TRY TERRAFREEZE NOW
                 <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
               </a>
