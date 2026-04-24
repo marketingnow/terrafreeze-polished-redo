@@ -77,7 +77,7 @@ const ProductPurchaseSection = () => {
                   <Star key={i} className="w-6 h-6 fill-amber-500 text-amber-500" strokeWidth={1.5} />
                 ))}
               </div>
-              <span className="text-muted-foreground text-lg">53,805 Reviews</span>
+              <span className="text-muted-foreground text-lg">538,000+ Pain Free Adults And Counting</span>
             </div>
           </div>
 
