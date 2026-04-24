@@ -102,9 +102,14 @@ const ProductPurchaseSection = () => {
                     <p className="font-heading font-bold text-foreground text-base">
                       {pkg.jars} {pkg.jars === 1 ? "Jar" : "Jars"}
                     </p>
-                    <p className="text-muted-foreground text-sm mt-1">
-                      ${pkg.pricePerJar.toFixed(2)} each
+                    <p className="text-foreground text-sm mt-1 font-semibold">
+                      ${pkg.totalPrice.toFixed(2)}
                     </p>
+                    {pkg.jars > 1 && (
+                      <p className="text-[11px] font-bold text-emerald-600 mt-0.5">
+                        Save ${(pkg.jars * 29.95 - pkg.totalPrice).toFixed(2)}
+                      </p>
+                    )}
                   </button>
                 </div>
               );
