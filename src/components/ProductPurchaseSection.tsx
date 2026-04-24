@@ -82,7 +82,7 @@ const ProductPurchaseSection = () => {
           </div>
 
           {/* Quantity Select */}
-          <p className="text-foreground text-xl mb-4 font-medium text-center sm:text-left">Select quantity:</p>
+          <p className="font-heading text-foreground text-xl mb-4 font-medium text-center sm:text-left">Select quantity:</p>
           <div className="grid grid-cols-3 gap-2 sm:gap-5 mb-10 items-stretch">
             {packages.map((pkg) => {
               const isSelected = selectedPackage === pkg.id;
