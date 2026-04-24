@@ -121,9 +121,9 @@ const ProductPurchaseSection = () => {
                     </p>
                     <div className="flex items-baseline justify-center gap-1.5 mt-2">
                       <span className="text-xs text-muted-foreground line-through">
-                        ${(pkg.jars * 29.95).toFixed(2)}
+                        ${pkg.regularPrice.toFixed(2)}
                       </span>
-                      <span className="text-primary font-bold text-base">
+                      <span className="text-accent font-bold text-base">
                         ${pkg.totalPrice.toFixed(2)}
                       </span>
                     </div>
