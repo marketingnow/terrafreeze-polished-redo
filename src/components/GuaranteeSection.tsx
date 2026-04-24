@@ -16,7 +16,7 @@ const GuaranteeSection = () => {
               </div>
 
               <h2 className="font-heading text-2xl sm:text-3xl lg:text-4xl font-bold text-white mb-4">
-                Try TERRAFREEZE Risk-Free for 60 Days
+                Try TERRAFREEZE Risk-Free for 180 Days
               </h2>
               
               <p className="text-base lg:text-lg text-white/80 mb-6 max-w-xl mx-auto">

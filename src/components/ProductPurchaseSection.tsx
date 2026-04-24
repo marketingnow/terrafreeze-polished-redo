@@ -1,6 +1,8 @@
 import { useState } from "react";
 import { Star, Check, Truck, Package, RotateCcw, Flame } from "lucide-react";
 import productImage from "@/assets/product.png";
+import product3Pack from "@/assets/product-3pack.png";
+import product6Pack from "@/assets/product-6pack.png";
 
 type PackageOption = {
   id: number;
@@ -9,6 +11,7 @@ type PackageOption = {
   totalPrice: number;
   badge?: { label: string; tone: "dark" | "amber" };
   cartUrl: string;
+  image: string;
 };
 
 const packages: PackageOption[] = [
@@ -18,6 +21,7 @@ const packages: PackageOption[] = [
     pricePerJar: 29.95,
     totalPrice: 29.95,
     cartUrl: "https://terrafreeze.com/checkout/?add-to-cart=19140&variation_id=32168",
+    image: productImage,
   },
   {
     id: 3,
@@ -26,6 +30,7 @@ const packages: PackageOption[] = [
     totalPrice: 69.95,
     badge: { label: "BEST SELLER", tone: "dark" },
     cartUrl: "https://terrafreeze.com/checkout/?add-to-cart=19140&variation_id=32169",
+    image: product3Pack,
   },
   {
     id: 6,
@@ -34,6 +39,7 @@ const packages: PackageOption[] = [
     totalPrice: 119.0,
     badge: { label: "BEST VALUE", tone: "amber" },
     cartUrl: "https://terrafreeze.com/checkout/?add-to-cart=19140&variation_id=32170",
+    image: product6Pack,
   },
 ];
 
@@ -88,12 +94,9 @@ const ProductPurchaseSection = () => {
                   >
                     <div className="flex items-center justify-center mb-2 h-24">
                       <img
-                        src={productImage}
+                        src={pkg.image}
                         alt={`${pkg.jars} jar${pkg.jars > 1 ? "s" : ""}`}
                         className="h-full object-contain"
-                        style={{
-                          transform: pkg.jars === 6 ? "scale(1.1)" : "scale(1)",
-                        }}
                       />
                     </div>
                     <p className="font-heading font-bold text-foreground text-base">
@@ -149,7 +152,7 @@ const ProductPurchaseSection = () => {
             <div className="flex flex-col items-center text-center gap-2">
               <RotateCcw className="w-6 h-6 text-foreground" strokeWidth={1.5} />
               <span className="text-xs text-muted-foreground leading-tight">
-                60-Day Money-<br />Back Guarantee
+                180-Day Money-<br />Back Guarantee
               </span>
             </div>
           </div>
