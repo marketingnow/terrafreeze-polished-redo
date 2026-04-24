@@ -60,7 +60,7 @@ const Navigation = () => {
             </button>
             <a
               href="#buy"
-              className="btn-primary !py-3 !px-6 text-sm"
+              className="btn-primary font-heading font-semibold !py-3 !px-6 text-sm"
             >
               Shop Now
             </a>
