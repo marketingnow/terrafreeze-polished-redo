@@ -62,33 +62,33 @@ const ProductPurchaseSection = () => {
   return (
     <section className="section-major bg-background" id="buy">
       <div className="content-container">
-        <div className="max-w-2xl mx-auto">
+        <div className="max-w-4xl mx-auto">
           {/* Title + Reviews */}
-          <div className="text-center mb-8">
-            <h2 className="font-heading text-3xl sm:text-4xl font-bold text-foreground mb-3">
+          <div className="text-center mb-10">
+            <h2 className="font-heading text-4xl sm:text-5xl font-bold text-foreground mb-4">
               TERRAFREEZE™
             </h2>
             <div className="flex items-center justify-center gap-2">
               <div className="flex gap-0.5">
                 {[...Array(5)].map((_, i) => (
-                  <Star key={i} className="w-5 h-5 fill-amber-500 text-amber-500" strokeWidth={1.5} />
+                  <Star key={i} className="w-6 h-6 fill-amber-500 text-amber-500" strokeWidth={1.5} />
                 ))}
               </div>
-              <span className="text-muted-foreground text-base">53,805 Reviews</span>
+              <span className="text-muted-foreground text-lg">53,805 Reviews</span>
             </div>
           </div>
 
           {/* Quantity Select */}
-          <p className="text-foreground text-lg mb-3">Select quantity:</p>
-          <div className="grid grid-cols-3 gap-3 mb-8 items-stretch">
+          <p className="text-foreground text-xl mb-4 font-medium">Select quantity:</p>
+          <div className="grid grid-cols-3 gap-4 sm:gap-5 mb-10 items-stretch">
             {packages.map((pkg) => {
               const isSelected = selectedPackage === pkg.id;
               return (
-                <div key={pkg.id} className="relative pt-3">
-                  <div className="h-5 mb-1 flex items-center justify-center">
+                <div key={pkg.id} className="relative pt-4">
+                  <div className="h-7 mb-1 flex items-center justify-center">
                     {pkg.badge && (
                       <div
-                        className={`px-3 py-1 text-[10px] font-bold tracking-wider rounded ${
+                        className={`px-3 py-1.5 text-xs font-bold tracking-wider rounded ${
                           pkg.badge.tone === "dark"
                             ? "bg-foreground text-background"
                             : "bg-amber-400 text-foreground"
@@ -100,30 +100,30 @@ const ProductPurchaseSection = () => {
                   </div>
                   <button
                     onClick={() => setSelectedPackage(pkg.id)}
-                    className={`w-full h-full rounded-2xl border-2 p-4 transition-all text-center ${
+                    className={`w-full h-full rounded-2xl border-2 p-5 sm:p-6 transition-all text-center ${
                       isSelected
                         ? "border-foreground bg-orange-50/60"
                         : "border-border bg-card hover:border-foreground/40"
                     }`}
                   >
-                    <div className="flex items-center justify-center mb-2 h-24">
+                    <div className="flex items-center justify-center mb-4 h-40 sm:h-44">
                       <img
                         src={pkg.image}
                         alt={`${pkg.jars} jar${pkg.jars > 1 ? "s" : ""}`}
-                        className="h-full object-contain"
+                        className="max-h-full max-w-full object-contain"
                       />
                     </div>
-                    <p className="font-heading font-bold text-foreground text-sm leading-tight">
+                    <p className="font-heading font-bold text-foreground text-base sm:text-lg leading-tight">
                       {pkg.title}
                     </p>
-                    <p className="text-muted-foreground text-xs mt-1 leading-snug min-h-[32px]">
+                    <p className="text-muted-foreground text-sm mt-2 leading-snug min-h-[40px]">
                       {pkg.tagline}
                     </p>
-                    <div className="flex items-baseline justify-center gap-1.5 mt-2">
-                      <span className="text-xs text-muted-foreground line-through">
+                    <div className="flex items-baseline justify-center gap-2 mt-3">
+                      <span className="text-sm text-muted-foreground line-through">
                         ${pkg.regularPrice.toFixed(2)}
                       </span>
-                      <span className="text-accent font-bold text-base">
+                      <span className="text-accent font-bold text-xl">
                         ${pkg.totalPrice.toFixed(2)}
                       </span>
                     </div>
