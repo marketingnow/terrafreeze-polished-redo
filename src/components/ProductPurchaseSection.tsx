@@ -71,12 +71,12 @@ const ProductPurchaseSection = () => {
                   <Star key={i} className="w-6 h-6 fill-amber-500 text-amber-500" strokeWidth={1.5} />
                 ))}
               </div>
-              <span className="text-muted-foreground text-base sm:text-lg">538,000+ Pain Free Adults And Counting</span>
+              <span className="font-heading text-muted-foreground text-base sm:text-lg font-medium">538,000+ Pain Free Adults And Counting</span>
             </div>
             <h2 className="font-heading text-3xl sm:text-5xl font-bold text-foreground mb-4 whitespace-nowrap">
               Stock up. Save more.
             </h2>
-            <p className="text-muted-foreground text-lg sm:text-xl max-w-2xl mx-auto">
+            <p className="font-heading text-muted-foreground text-lg sm:text-xl max-w-2xl mx-auto">
               From workout soreness to everyday aches, TERRAFREEZE delivers fast, targeted relief the whole household can count on.
             </p>
           </div>
