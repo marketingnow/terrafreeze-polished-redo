@@ -68,25 +68,27 @@ const ProductPurchaseSection = () => {
 
           {/* Quantity Select */}
           <p className="text-foreground text-lg mb-3">Select quantity:</p>
-          <div className="grid grid-cols-3 gap-3 mb-8">
+          <div className="grid grid-cols-3 gap-3 mb-8 items-stretch">
             {packages.map((pkg) => {
               const isSelected = selectedPackage === pkg.id;
               return (
                 <div key={pkg.id} className="relative pt-3">
-                  {pkg.badge && (
-                    <div
-                      className={`absolute top-0 left-1/2 -translate-x-1/2 px-3 py-1 text-[10px] font-bold tracking-wider rounded z-10 ${
-                        pkg.badge.tone === "dark"
-                          ? "bg-foreground text-background"
-                          : "bg-amber-400 text-foreground"
-                      }`}
-                    >
-                      {pkg.badge.label}
-                    </div>
-                  )}
+                  <div className="h-5 mb-1 flex items-center justify-center">
+                    {pkg.badge && (
+                      <div
+                        className={`px-3 py-1 text-[10px] font-bold tracking-wider rounded ${
+                          pkg.badge.tone === "dark"
+                            ? "bg-foreground text-background"
+                            : "bg-amber-400 text-foreground"
+                        }`}
+                      >
+                        {pkg.badge.label}
+                      </div>
+                    )}
+                  </div>
                   <button
                     onClick={() => setSelectedPackage(pkg.id)}
-                    className={`w-full rounded-2xl border-2 p-4 transition-all text-center ${
+                    className={`w-full h-full rounded-2xl border-2 p-4 transition-all text-center ${
                       isSelected
                         ? "border-foreground bg-orange-50/60"
                         : "border-border bg-card hover:border-foreground/40"
@@ -131,10 +133,9 @@ const ProductPurchaseSection = () => {
           {/* CTA Button */}
           <a
             href={selected.cartUrl}
-            className="block w-full text-center font-bold tracking-wide text-white py-5 rounded-md transition-all hover:opacity-90 mb-6"
+            className="block w-full text-center font-bold tracking-wide text-primary-foreground bg-primary py-5 rounded-md transition-all hover:opacity-90 mb-6"
             style={{
               fontSize: "22px",
-              backgroundColor: "hsl(160 50% 60%)",
             }}
           >
             ADD TO CART — ${selected.totalPrice.toFixed(2)}
