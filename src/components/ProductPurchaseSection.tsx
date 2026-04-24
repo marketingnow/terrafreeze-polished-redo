@@ -83,14 +83,14 @@ const ProductPurchaseSection = () => {
 
           {/* Quantity Select */}
           <p className="text-foreground text-xl mb-4 font-medium">Select quantity:</p>
-          <div className="grid grid-cols-3 gap-4 sm:gap-5 mb-10 items-stretch">
+          <div className="grid grid-cols-3 gap-2 sm:gap-5 mb-10 items-stretch">
             {packages.map((pkg) => {
               const isSelected = selectedPackage === pkg.id;
               return (
-                <div key={pkg.id} className="relative pt-3">
+                <div key={pkg.id} className="relative pt-6 sm:pt-3">
                   {pkg.badge && (
                     <div
-                      className={`absolute top-0 left-1/2 -translate-x-1/2 z-10 px-4 py-1.5 text-xs font-bold tracking-wider rounded-t-md ${
+                      className={`absolute top-0 left-1/2 -translate-x-1/2 z-10 px-2 sm:px-4 py-1 sm:py-1.5 text-[9px] sm:text-xs font-bold tracking-wider rounded-t-md whitespace-nowrap ${
                         pkg.badge.tone === "dark"
                           ? "bg-foreground text-background"
                           : "bg-amber-400 text-foreground"
@@ -101,37 +101,38 @@ const ProductPurchaseSection = () => {
                   )}
                   <button
                     onClick={() => setSelectedPackage(pkg.id)}
-                    className={`w-full h-full rounded-2xl rounded-tl-2xl rounded-tr-2xl border-2 p-5 sm:p-6 pt-7 transition-all text-center ${
+                    className={`w-full h-full rounded-2xl border-2 p-2.5 sm:p-6 pt-4 sm:pt-7 transition-all text-center ${
                       isSelected
                         ? "border-foreground bg-orange-50/60"
                         : "border-border bg-card hover:border-foreground/40"
                     }`}
                   >
-                    <div className="flex items-center justify-center mb-4 h-40 sm:h-44">
+                    <div className="flex items-center justify-center mb-3 sm:mb-4 h-24 sm:h-44">
                       <img
                         src={pkg.image}
                         alt={`${pkg.jars} jar${pkg.jars > 1 ? "s" : ""}`}
                         className="max-h-full max-w-full object-contain"
                       />
                     </div>
-                    <p className="font-heading font-bold text-foreground text-base sm:text-lg leading-tight">
+                    <p className="font-heading font-bold text-foreground text-xs sm:text-lg leading-tight">
                       {pkg.title}
                     </p>
-                    <p className="text-muted-foreground text-sm mt-2 leading-snug min-h-[40px]">
+                    <p className="hidden sm:block text-muted-foreground text-sm mt-2 leading-snug min-h-[40px]">
                       {pkg.tagline}
                     </p>
-                    <div className="flex items-baseline justify-center gap-2 mt-3">
-                      <span className="text-sm text-muted-foreground line-through">
+                    <div className="flex flex-col sm:flex-row items-center sm:items-baseline justify-center gap-0.5 sm:gap-2 mt-2 sm:mt-3">
+                      <span className="text-xs sm:text-sm text-muted-foreground line-through">
                         ${pkg.regularPrice.toFixed(2)}
                       </span>
-                      <span className="text-accent font-bold text-xl">
+                      <span className="text-accent font-bold text-base sm:text-xl">
                         ${pkg.totalPrice.toFixed(2)}
                       </span>
                     </div>
                     {pkg.jars > 1 && (
-                      <div className="mt-3 inline-flex items-center gap-1.5 text-xs font-semibold text-green-700 bg-green-50 border border-green-200 rounded-full px-2.5 py-1">
-                        <Truck className="w-3.5 h-3.5" strokeWidth={2} />
-                        FREE SHIPPING
+                      <div className="mt-2 sm:mt-3 inline-flex items-center gap-1 sm:gap-1.5 text-[9px] sm:text-xs font-semibold text-green-700 bg-green-50 border border-green-200 rounded-full px-1.5 sm:px-2.5 py-0.5 sm:py-1">
+                        <Truck className="w-2.5 h-2.5 sm:w-3.5 sm:h-3.5" strokeWidth={2} />
+                        <span className="hidden sm:inline">FREE SHIPPING</span>
+                        <span className="sm:hidden">FREE SHIP</span>
                       </div>
                     )}
                   </button>
