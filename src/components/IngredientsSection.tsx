@@ -71,7 +71,7 @@ const IngredientsSection = () => {
           </div>
 
           {/* Subheadline */}
-          <p className="text-center text-muted-foreground max-w-3xl mx-auto mb-12 text-lg">
+          <p className="font-heading text-center text-muted-foreground max-w-3xl mx-auto mb-12 text-lg">
             We don't hide behind 30-ingredient labels. TERRAFREEZE™ contains only clinically-proven active ingredients, each one selected to deliver real pain relief from within.
           </p>
 
