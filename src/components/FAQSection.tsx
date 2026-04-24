@@ -10,7 +10,7 @@ const faqs = [{
   answer: "You can safely apply TERRAFREEZE™ up to 3-4 times daily. It's designed for regular use and is gentle enough for daily application on sore muscles and stiff joints."
 }, {
   question: "What if it doesn't work for me?",
-  answer: "We offer a 60-day money-back guarantee. If you're not completely satisfied with your results, simply contact us for a full refund — no questions asked. We're confident in TERRAFREEZE™, and we want you to be too."
+  answer: "We offer a 180-day money-back guarantee. If you're not completely satisfied with your results, simply contact us for a full refund — no questions asked. We're confident in TERRAFREEZE™, and we want you to be too."
 }];
 const FAQSection = () => {
   return <section className="section-supporting bg-secondary/30" id="ingredients">

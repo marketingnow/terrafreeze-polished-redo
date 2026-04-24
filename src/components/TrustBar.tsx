@@ -19,7 +19,7 @@ const trustItems = [
   {
     icon: ShieldCheck,
     title: "Satisfaction Guaranteed",
-    description: "60-day money back promise",
+    description: "180-day money back promise",
   },
 ];
 
