@@ -11,6 +11,7 @@ type PackageOption = {
   tagline: string;
   pricePerJar: number;
   totalPrice: number;
+  regularPrice: number;
   badge?: { label: string; tone: "dark" | "amber" };
   cartUrl: string;
   image: string;
@@ -24,6 +25,7 @@ const packages: PackageOption[] = [
     tagline: "Ideal for trial or occasional use.",
     pricePerJar: 29.95,
     totalPrice: 29.95,
+    regularPrice: 49.95,
     cartUrl: "https://terrafreeze.com/checkout/?add-to-cart=19140&variation_id=32168",
     image: productImage,
   },
@@ -34,6 +36,7 @@ const packages: PackageOption[] = [
     tagline: "Perfect for ongoing relief.",
     pricePerJar: 23.32,
     totalPrice: 69.95,
+    regularPrice: 119.0,
     badge: { label: "BEST SELLER", tone: "dark" },
     cartUrl: "https://terrafreeze.com/checkout/?add-to-cart=19140&variation_id=32169",
     image: product3Pack,
@@ -45,6 +48,7 @@ const packages: PackageOption[] = [
     tagline: "Maximum value for long-term relief.",
     pricePerJar: 19.83,
     totalPrice: 119.0,
+    regularPrice: 234.0,
     badge: { label: "BEST VALUE", tone: "amber" },
     cartUrl: "https://terrafreeze.com/checkout/?add-to-cart=19140&variation_id=32170",
     image: product6Pack,
