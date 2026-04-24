@@ -65,13 +65,7 @@ const ProductPurchaseSection = () => {
         <div className="max-w-4xl mx-auto">
           {/* Title + Reviews */}
           <div className="text-center mb-10">
-            <h2 className="font-heading text-4xl sm:text-5xl font-bold text-foreground mb-4">
-              Stock up. Save more.
-            </h2>
-            <p className="text-muted-foreground text-lg sm:text-xl max-w-2xl mx-auto mb-5">
-              From workout soreness to everyday aches, TERRAFREEZE delivers fast, targeted relief the whole household can count on.
-            </p>
-            <div className="flex items-center justify-center gap-2">
+            <div className="flex items-center justify-center gap-2 mb-4">
               <div className="flex gap-0.5">
                 {[...Array(5)].map((_, i) => (
                   <Star key={i} className="w-6 h-6 fill-amber-500 text-amber-500" strokeWidth={1.5} />
@@ -79,6 +73,12 @@ const ProductPurchaseSection = () => {
               </div>
               <span className="text-muted-foreground text-lg">538,000+ Pain Free Adults And Counting</span>
             </div>
+            <h2 className="font-heading text-4xl sm:text-5xl font-bold text-foreground mb-4">
+              Stock up. Save more.
+            </h2>
+            <p className="text-muted-foreground text-lg sm:text-xl max-w-2xl mx-auto">
+              From workout soreness to everyday aches, TERRAFREEZE delivers fast, targeted relief the whole household can count on.
+            </p>
           </div>
 
           {/* Quantity Select */}
