@@ -7,6 +7,8 @@ import product6Pack from "@/assets/product-6pack.png";
 type PackageOption = {
   id: number;
   jars: number;
+  title: string;
+  tagline: string;
   pricePerJar: number;
   totalPrice: number;
   badge?: { label: string; tone: "dark" | "amber" };
@@ -18,6 +20,8 @@ const packages: PackageOption[] = [
   {
     id: 1,
     jars: 1,
+    title: "TERRAFREEZE 2oz Jar",
+    tagline: "Ideal for trial or occasional use.",
     pricePerJar: 29.95,
     totalPrice: 29.95,
     cartUrl: "https://terrafreeze.com/checkout/?add-to-cart=19140&variation_id=32168",
@@ -26,6 +30,8 @@ const packages: PackageOption[] = [
   {
     id: 3,
     jars: 3,
+    title: "TERRAFREEZE 3-Pack",
+    tagline: "Perfect for ongoing relief.",
     pricePerJar: 23.32,
     totalPrice: 69.95,
     badge: { label: "BEST SELLER", tone: "dark" },
@@ -35,6 +41,8 @@ const packages: PackageOption[] = [
   {
     id: 6,
     jars: 6,
+    title: "TERRAFREEZE 6-Pack",
+    tagline: "Maximum value for long-term relief.",
     pricePerJar: 19.83,
     totalPrice: 119.0,
     badge: { label: "BEST VALUE", tone: "amber" },
@@ -101,17 +109,20 @@ const ProductPurchaseSection = () => {
                         className="h-full object-contain"
                       />
                     </div>
-                    <p className="font-heading font-bold text-foreground text-base">
-                      {pkg.jars} {pkg.jars === 1 ? "Jar" : "Jars"}
+                    <p className="font-heading font-bold text-foreground text-sm leading-tight">
+                      {pkg.title}
                     </p>
-                    <p className="text-foreground text-sm mt-1 font-semibold">
-                      ${pkg.totalPrice.toFixed(2)}
+                    <p className="text-muted-foreground text-xs mt-1 leading-snug min-h-[32px]">
+                      {pkg.tagline}
                     </p>
-                    {pkg.jars > 1 && (
-                      <p className="text-[11px] font-bold text-emerald-600 mt-0.5">
-                        Save ${(pkg.jars * 29.95 - pkg.totalPrice).toFixed(2)}
-                      </p>
-                    )}
+                    <div className="flex items-baseline justify-center gap-1.5 mt-2">
+                      <span className="text-xs text-muted-foreground line-through">
+                        ${(pkg.jars * 29.95).toFixed(2)}
+                      </span>
+                      <span className="text-primary font-bold text-base">
+                        ${pkg.totalPrice.toFixed(2)}
+                      </span>
+                    </div>
                   </button>
                 </div>
               );
