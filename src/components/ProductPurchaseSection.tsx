@@ -142,21 +142,21 @@ const ProductPurchaseSection = () => {
           </div>
 
           {/* Purchase Type */}
-          <p className="text-foreground text-lg mb-3">Select your purchase type:</p>
+          <p className="font-heading text-foreground text-lg mb-3">Select your purchase type:</p>
           <div className="border-2 border-foreground rounded-2xl p-5 bg-orange-50/60 mb-6">
             <div className="flex items-center gap-3">
               <div className="w-5 h-5 rounded-full border-2 border-foreground flex items-center justify-center">
                 <div className="w-2.5 h-2.5 rounded-full bg-foreground" />
               </div>
-              <span className="font-semibold text-foreground text-lg">One Time</span>
-              <span className="text-foreground text-lg ml-2">${selected.totalPrice.toFixed(2)}</span>
+              <span className="font-heading font-semibold text-foreground text-lg">One Time</span>
+              <span className="font-heading text-foreground text-lg ml-2">${selected.totalPrice.toFixed(2)}</span>
             </div>
           </div>
 
           {/* CTA Button */}
           <a
             href={selected.cartUrl}
-            className="block w-full text-center font-bold tracking-wide text-accent-foreground bg-accent py-5 rounded-md transition-all hover:opacity-90 mb-6"
+            className="font-heading block w-full text-center font-bold tracking-wide text-accent-foreground bg-accent py-5 rounded-md transition-all hover:opacity-90 mb-6"
             style={{
               fontSize: "22px",
             }}
