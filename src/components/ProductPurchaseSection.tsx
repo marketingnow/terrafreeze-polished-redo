@@ -155,7 +155,7 @@ const ProductPurchaseSection = () => {
           {/* CTA Button */}
           <a
             href={selected.cartUrl}
-            className="block w-full text-center font-bold tracking-wide text-primary-foreground bg-primary py-5 rounded-md transition-all hover:opacity-90 mb-6"
+            className="block w-full text-center font-bold tracking-wide text-accent-foreground bg-accent py-5 rounded-md transition-all hover:opacity-90 mb-6"
             style={{
               fontSize: "22px",
             }}
