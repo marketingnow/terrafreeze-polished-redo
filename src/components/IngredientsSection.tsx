@@ -100,13 +100,13 @@ const IngredientsSection = () => {
                     {ingredient.name}
                   </h3>
 
-                  <p className="text-white text-base lg:text-lg leading-snug font-semibold max-w-[75%] drop-shadow-md">
+                  <p className="font-heading text-white text-base lg:text-lg leading-snug font-semibold max-w-[75%] drop-shadow-md">
                     {ingredient.description}
                   </p>
 
                   {/* Pill badge bottom-right */}
                   <div className="absolute bottom-5 right-5">
-                    <span className="inline-block px-4 py-1.5 bg-white text-foreground text-xs font-mono rounded-full shadow-md">
+                    <span className="font-heading inline-block px-4 py-1.5 bg-white text-foreground text-xs font-semibold rounded-full shadow-md">
                       {ingredient.badge}
                     </span>
                   </div>
