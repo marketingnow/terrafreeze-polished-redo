@@ -117,19 +117,19 @@ const ProductPurchaseSection = () => {
                     <p className="font-heading font-bold text-foreground text-xs sm:text-lg leading-tight">
                       {pkg.title}
                     </p>
-                    <p className="hidden sm:block text-muted-foreground text-sm mt-2 leading-snug min-h-[40px]">
+                    <p className="font-heading hidden sm:block text-muted-foreground text-sm mt-2 leading-snug min-h-[40px]">
                       {pkg.tagline}
                     </p>
                     <div className="flex flex-col sm:flex-row items-center sm:items-baseline justify-center gap-0.5 sm:gap-2 mt-2 sm:mt-3">
-                      <span className="text-xs sm:text-sm text-muted-foreground line-through">
+                      <span className="font-heading text-xs sm:text-sm text-muted-foreground line-through">
                         ${pkg.regularPrice.toFixed(2)}
                       </span>
-                      <span className="text-accent font-bold text-base sm:text-xl">
+                      <span className="font-heading text-accent font-bold text-base sm:text-xl">
                         ${pkg.totalPrice.toFixed(2)}
                       </span>
                     </div>
                     {pkg.jars > 1 && (
-                      <div className="mt-2 sm:mt-3 inline-flex items-center gap-1 sm:gap-1.5 text-[9px] sm:text-xs font-semibold text-green-700 bg-green-50 border border-green-200 rounded-full px-1.5 sm:px-2.5 py-0.5 sm:py-1">
+                      <div className="font-heading mt-2 sm:mt-3 inline-flex items-center gap-1 sm:gap-1.5 text-[9px] sm:text-xs font-semibold text-green-700 bg-green-50 border border-green-200 rounded-full px-1.5 sm:px-2.5 py-0.5 sm:py-1">
                         <Truck className="w-2.5 h-2.5 sm:w-3.5 sm:h-3.5" strokeWidth={2} />
                         <span className="hidden sm:inline">FREE SHIPPING</span>
                         <span className="sm:hidden">FREE SHIP</span>
