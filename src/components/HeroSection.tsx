@@ -174,9 +174,9 @@ const HeroSection = () => {
             {/* Bullet points */}
             <ul className="space-y-2.5 mb-5">
               {[
-                "Works on arthritis, joint pain, muscle aches, and inflammation",
-                "FDA Registered • Ships from the USA",
-                "Recommended by physical therapists and clinical pain specialists",
+                "Works On Arthritis, Joint Pain, Muscle Aches, and Inflammation",
+                "FDA Registered • Ships From The USA",
+                "Recommended By Physical Therapists and Clinical Pain Specialists",
               ].map((point, i) => (
                 <li key={i} className="flex items-start gap-2.5">
                   <span className="flex-shrink-0 w-5 h-5 rounded-full bg-primary/10 flex items-center justify-center mt-0.5">
