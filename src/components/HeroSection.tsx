@@ -129,7 +129,7 @@ const HeroSection = () => {
                 <Star key={i} strokeWidth={0} className="w-4 h-4 fill-amber-500 text-amber-500" />
               ))}
             </div>
-            <span className="font-heading text-sm font-medium text-foreground">
+            <span className="font-heading text-sm font-medium" style={{ color: "hsl(215 70% 25%)" }}>
               538,000+ Pain Free Adults And Counting
             </span>
           </div>
@@ -153,7 +153,7 @@ const HeroSection = () => {
                   <Star key={i} strokeWidth={0} className="w-4 h-4 fill-amber-500 text-amber-500" />
                 ))}
               </div>
-              <span className="font-heading text-sm font-medium text-foreground">
+              <span className="font-heading text-sm font-medium" style={{ color: "hsl(215 70% 25%)" }}>
                 538,000+ Pain Free Adults And Counting
               </span>
             </div>
