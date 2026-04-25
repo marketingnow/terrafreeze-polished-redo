@@ -218,17 +218,17 @@ const HeroSection = () => {
                 />
               </div>
 
-              {/* Floating testimonial - desktop only, overlapping bottom */}
-              <div className="hidden lg:block absolute -bottom-6 -left-6 z-20 glass-card rounded-lg p-3 max-w-[220px] animate-float">
-                <div className="flex items-center gap-0.5 mb-1.5">
+              {/* Testimonial - desktop only, overlapping bottom center */}
+              <div className="hidden lg:block absolute -bottom-6 left-1/2 -translate-x-1/2 z-20 glass-card rounded-lg p-3 max-w-[220px]">
+                <div className="flex items-center justify-center gap-0.5 mb-1.5">
                   {[...Array(5)].map((_, i) => (
                     <Star key={i} strokeWidth={0} className="w-3.5 h-3.5 fill-amber-500 text-amber-500" />
                   ))}
                 </div>
-                <p className="font-heading text-xs text-foreground leading-snug italic">
+                <p className="font-heading text-xs text-foreground leading-snug italic text-center">
                   "Finally something that works on my knees without burning."
                 </p>
-                <p className="font-heading text-[10px] text-muted-foreground mt-1.5">— Verified Customer</p>
+                <p className="font-heading text-[10px] text-muted-foreground mt-1.5 text-center">— Verified Customer</p>
               </div>
 
             </div>
