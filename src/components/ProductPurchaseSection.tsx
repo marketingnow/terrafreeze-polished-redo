@@ -171,7 +171,7 @@ const ProductPurchaseSection = () => {
             <div className="flex flex-col items-center text-center gap-2">
               <Package className="w-6 h-6 text-foreground" strokeWidth={1.5} />
               <span className="font-display text-xs text-muted-foreground leading-tight">
-                Free shipping on<br />orders $99+
+                Free shipping on<br />orders $50+
               </span>
             </div>
             <div className="flex flex-col items-center text-center gap-2 border-x border-border">
