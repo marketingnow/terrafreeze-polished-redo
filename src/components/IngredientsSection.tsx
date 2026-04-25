@@ -126,7 +126,7 @@ const IngredientsSection = () => {
           {/* Headline */}
           <div className="text-center mb-4">
             <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground">
-              18 Ingredients in 1 <em className="text-primary">Powerful Formula.</em>
+              18 Ingredients in 1 Powerful Formula.
             </h2>
           </div>
 
