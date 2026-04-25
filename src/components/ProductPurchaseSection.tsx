@@ -87,10 +87,10 @@ const ProductPurchaseSection = () => {
             {packages.map((pkg) => {
               const isSelected = selectedPackage === pkg.id;
               return (
-                <div key={pkg.id} className="relative pt-6 sm:pt-3">
+                <div key={pkg.id} className="relative pt-3 sm:pt-4">
                   {pkg.badge && (
                     <div
-                      className={`font-display absolute top-0 left-1/2 -translate-x-1/2 z-10 px-2 sm:px-4 py-1 sm:py-1.5 text-[9px] sm:text-xs font-bold tracking-wider rounded-t-md whitespace-nowrap ${
+                      className={`font-display absolute -top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 z-10 px-2.5 sm:px-4 py-1 sm:py-1.5 text-[9px] sm:text-xs font-bold tracking-wider rounded-md whitespace-nowrap shadow-sm ${
                         pkg.badge.tone === "dark"
                           ? "bg-foreground text-background"
                           : "bg-amber-400 text-foreground"
