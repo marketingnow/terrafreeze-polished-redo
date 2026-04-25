@@ -58,20 +58,20 @@ const IngredientsSection = () => {
         <div className="max-w-6xl mx-auto">
           {/* Section Badge */}
           <div className="flex justify-center mb-6">
-            <span className="font-heading inline-block px-4 py-1.5 bg-primary text-primary-foreground text-sm font-semibold rounded-full uppercase tracking-wide">
+            <span className="font-display inline-block px-4 py-1.5 bg-primary text-primary-foreground text-sm font-semibold rounded-full uppercase tracking-wide">
               What's Inside
             </span>
           </div>
 
           {/* Headline */}
           <div className="text-center mb-4">
-            <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground">
+            <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground">
               Only 6 Ingredients. Zero Fillers. <em className="text-primary">All Active.</em>
             </h2>
           </div>
 
           {/* Subheadline */}
-          <p className="font-heading text-center text-muted-foreground max-w-3xl mx-auto mb-12 text-lg">
+          <p className="font-display text-center text-muted-foreground max-w-3xl mx-auto mb-12 text-lg">
             We don't hide behind 30-ingredient labels. TERRAFREEZE™ contains only clinically-proven active ingredients, each one selected to deliver real pain relief from within.
           </p>
 
@@ -96,17 +96,17 @@ const IngredientsSection = () => {
 
                 {/* Content */}
                 <div className="relative flex flex-col h-full p-7">
-                  <h3 className="font-heading text-2xl sm:text-3xl lg:text-[2rem] font-bold text-white mb-3 leading-tight sm:whitespace-nowrap">
+                  <h3 className="font-display text-2xl sm:text-3xl lg:text-[2rem] font-bold text-white mb-3 leading-tight sm:whitespace-nowrap">
                     {ingredient.name}
                   </h3>
 
-                  <p className="font-heading text-white text-base lg:text-lg leading-snug font-semibold max-w-[75%] drop-shadow-md">
+                  <p className="font-display text-white text-base lg:text-lg leading-snug font-semibold max-w-[75%] drop-shadow-md">
                     {ingredient.description}
                   </p>
 
                   {/* Pill badge bottom-right */}
                   <div className="absolute bottom-5 right-5">
-                    <span className="font-heading inline-block px-4 py-1.5 bg-white text-foreground text-xs font-semibold rounded-full shadow-md">
+                    <span className="font-display inline-block px-4 py-1.5 bg-white text-foreground text-xs font-semibold rounded-full shadow-md">
                       {ingredient.badge}
                     </span>
                   </div>
