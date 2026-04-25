@@ -73,10 +73,10 @@ const ProductPurchaseSection = () => {
               </div>
               <span className="font-display text-muted-foreground text-base sm:text-lg font-medium">538,000+ Pain Free Adults And Counting</span>
             </div>
-            <h2 className="font-display text-3xl sm:text-5xl font-bold text-foreground mb-4 whitespace-nowrap">
+            <h2 className="font-display text-4xl sm:text-6xl font-bold text-foreground mb-4 whitespace-nowrap">
               Stock up. Save more.
             </h2>
-            <p className="font-display text-muted-foreground text-lg sm:text-xl max-w-2xl mx-auto">
+            <p className="font-display text-muted-foreground text-xl sm:text-2xl max-w-2xl mx-auto">
               From workout soreness to everyday aches, TERRAFREEZE delivers fast, targeted relief the whole household can count on.
             </p>
           </div>
@@ -116,17 +116,17 @@ const ProductPurchaseSection = () => {
                         className="max-h-full max-w-full object-contain"
                       />
                     </div>
-                    <p className="font-display font-bold text-foreground text-xs sm:text-lg leading-tight">
+                    <p className="font-display font-bold text-foreground text-sm sm:text-xl leading-tight">
                       {pkg.title}
                     </p>
-                    <p className="font-display hidden sm:block text-muted-foreground text-sm mt-2 leading-snug min-h-[40px]">
+                    <p className="font-display hidden sm:block text-muted-foreground text-base mt-2 leading-snug min-h-[40px]">
                       {pkg.tagline}
                     </p>
                     <div className="flex flex-col sm:flex-row items-center sm:items-baseline justify-center gap-0.5 sm:gap-2 mt-2 sm:mt-3">
-                      <span className="font-display text-xs sm:text-sm text-muted-foreground line-through">
+                      <span className="font-display text-sm sm:text-base text-muted-foreground line-through">
                         ${pkg.regularPrice.toFixed(2)}
                       </span>
-                      <span className="font-display text-accent font-bold text-base sm:text-xl">
+                      <span className="font-display text-accent font-bold text-lg sm:text-2xl">
                         ${pkg.totalPrice.toFixed(2)}
                       </span>
                     </div>
