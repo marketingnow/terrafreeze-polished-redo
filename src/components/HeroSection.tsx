@@ -134,7 +134,7 @@ const HeroSection = () => {
             </span>
           </div>
 
-          <h1 className="font-display font-medium text-foreground leading-[1.1]" style={{ fontSize: "49px" }}>
+          <h1 className="font-display font-medium text-foreground leading-[1.1]" style={{ fontSize: "45px" }}>
             Finally Move Without Pain —{" "}
             <span className="gradient-text">
               Without Pills, Prescriptions, or Doctor Visits
@@ -159,7 +159,7 @@ const HeroSection = () => {
             </div>
 
             {/* Headline - desktop only */}
-            <h1 className="hidden lg:block font-display font-medium text-foreground leading-[1.1] mb-3" style={{ fontSize: "49px" }}>
+            <h1 className="hidden lg:block font-display font-medium text-foreground leading-[1.1] mb-3" style={{ fontSize: "45px" }}>
               Finally Move Without Pain —{" "}
               <span className="gradient-text">
                 Without Pills, Prescriptions, or Doctor Visits
