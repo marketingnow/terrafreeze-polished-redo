@@ -71,18 +71,18 @@ const ProductPurchaseSection = () => {
                   <Star key={i} className="w-6 h-6 fill-amber-500 text-amber-500" strokeWidth={1.5} />
                 ))}
               </div>
-              <span className="font-heading text-muted-foreground text-base sm:text-lg font-medium">538,000+ Pain Free Adults And Counting</span>
+              <span className="font-display text-muted-foreground text-base sm:text-lg font-medium">538,000+ Pain Free Adults And Counting</span>
             </div>
-            <h2 className="font-heading text-3xl sm:text-5xl font-bold text-foreground mb-4 whitespace-nowrap">
+            <h2 className="font-display text-3xl sm:text-5xl font-bold text-foreground mb-4 whitespace-nowrap">
               Stock up. Save more.
             </h2>
-            <p className="font-heading text-muted-foreground text-lg sm:text-xl max-w-2xl mx-auto">
+            <p className="font-display text-muted-foreground text-lg sm:text-xl max-w-2xl mx-auto">
               From workout soreness to everyday aches, TERRAFREEZE delivers fast, targeted relief the whole household can count on.
             </p>
           </div>
 
           {/* Quantity Select */}
-          <p className="font-heading text-foreground text-xl mb-4 font-medium text-center sm:text-left">Select quantity:</p>
+          <p className="font-display text-foreground text-xl mb-4 font-medium text-center sm:text-left">Select quantity:</p>
           <div className="grid grid-cols-3 gap-2 sm:gap-5 mb-10 items-stretch">
             {packages.map((pkg) => {
               const isSelected = selectedPackage === pkg.id;
@@ -90,7 +90,7 @@ const ProductPurchaseSection = () => {
                 <div key={pkg.id} className="relative pt-6 sm:pt-3">
                   {pkg.badge && (
                     <div
-                      className={`font-heading absolute top-0 left-1/2 -translate-x-1/2 z-10 px-2 sm:px-4 py-1 sm:py-1.5 text-[9px] sm:text-xs font-bold tracking-wider rounded-t-md whitespace-nowrap ${
+                      className={`font-display absolute top-0 left-1/2 -translate-x-1/2 z-10 px-2 sm:px-4 py-1 sm:py-1.5 text-[9px] sm:text-xs font-bold tracking-wider rounded-t-md whitespace-nowrap ${
                         pkg.badge.tone === "dark"
                           ? "bg-foreground text-background"
                           : "bg-amber-400 text-foreground"
@@ -114,22 +114,22 @@ const ProductPurchaseSection = () => {
                         className="max-h-full max-w-full object-contain"
                       />
                     </div>
-                    <p className="font-heading font-bold text-foreground text-xs sm:text-lg leading-tight">
+                    <p className="font-display font-bold text-foreground text-xs sm:text-lg leading-tight">
                       {pkg.title}
                     </p>
-                    <p className="font-heading hidden sm:block text-muted-foreground text-sm mt-2 leading-snug min-h-[40px]">
+                    <p className="font-display hidden sm:block text-muted-foreground text-sm mt-2 leading-snug min-h-[40px]">
                       {pkg.tagline}
                     </p>
                     <div className="flex flex-col sm:flex-row items-center sm:items-baseline justify-center gap-0.5 sm:gap-2 mt-2 sm:mt-3">
-                      <span className="font-heading text-xs sm:text-sm text-muted-foreground line-through">
+                      <span className="font-display text-xs sm:text-sm text-muted-foreground line-through">
                         ${pkg.regularPrice.toFixed(2)}
                       </span>
-                      <span className="font-heading text-accent font-bold text-base sm:text-xl">
+                      <span className="font-display text-accent font-bold text-base sm:text-xl">
                         ${pkg.totalPrice.toFixed(2)}
                       </span>
                     </div>
                     {pkg.jars > 1 && (
-                      <div className="font-heading mt-2 sm:mt-3 inline-flex items-center gap-1 sm:gap-1.5 text-[9px] sm:text-xs font-semibold text-green-700 bg-green-50 border border-green-200 rounded-full px-1.5 sm:px-2.5 py-0.5 sm:py-1">
+                      <div className="font-display mt-2 sm:mt-3 inline-flex items-center gap-1 sm:gap-1.5 text-[9px] sm:text-xs font-semibold text-green-700 bg-green-50 border border-green-200 rounded-full px-1.5 sm:px-2.5 py-0.5 sm:py-1">
                         <Truck className="w-2.5 h-2.5 sm:w-3.5 sm:h-3.5" strokeWidth={2} />
                         <span className="hidden sm:inline">FREE SHIPPING</span>
                         <span className="sm:hidden">FREE SHIP</span>
@@ -142,21 +142,21 @@ const ProductPurchaseSection = () => {
           </div>
 
           {/* Purchase Type */}
-          <p className="font-heading text-foreground text-lg mb-3">Select your purchase type:</p>
+          <p className="font-display text-foreground text-lg mb-3">Select your purchase type:</p>
           <div className="border-2 border-foreground rounded-2xl p-5 bg-orange-50/60 mb-6">
             <div className="flex items-center gap-3">
               <div className="w-5 h-5 rounded-full border-2 border-foreground flex items-center justify-center">
                 <div className="w-2.5 h-2.5 rounded-full bg-foreground" />
               </div>
-              <span className="font-heading font-semibold text-foreground text-lg">One Time</span>
-              <span className="font-heading text-foreground text-lg ml-2">${selected.totalPrice.toFixed(2)}</span>
+              <span className="font-display font-semibold text-foreground text-lg">One Time</span>
+              <span className="font-display text-foreground text-lg ml-2">${selected.totalPrice.toFixed(2)}</span>
             </div>
           </div>
 
           {/* CTA Button */}
           <a
             href={selected.cartUrl}
-            className="font-heading block w-full text-center font-bold tracking-wide text-accent-foreground bg-accent py-5 rounded-md transition-all hover:opacity-90 mb-6"
+            className="font-display block w-full text-center font-bold tracking-wide text-accent-foreground bg-accent py-5 rounded-md transition-all hover:opacity-90 mb-6"
             style={{
               fontSize: "22px",
             }}
@@ -168,19 +168,19 @@ const ProductPurchaseSection = () => {
           <div className="grid grid-cols-3 gap-4 mb-6 pt-2">
             <div className="flex flex-col items-center text-center gap-2">
               <Package className="w-6 h-6 text-foreground" strokeWidth={1.5} />
-              <span className="font-heading text-xs text-muted-foreground leading-tight">
+              <span className="font-display text-xs text-muted-foreground leading-tight">
                 Free shipping on<br />orders $99+
               </span>
             </div>
             <div className="flex flex-col items-center text-center gap-2 border-x border-border">
               <Truck className="w-6 h-6 text-foreground" strokeWidth={1.5} />
-              <span className="font-heading text-xs text-muted-foreground leading-tight">
+              <span className="font-display text-xs text-muted-foreground leading-tight">
                 4-7 Day<br />US Delivery
               </span>
             </div>
             <div className="flex flex-col items-center text-center gap-2">
               <RotateCcw className="w-6 h-6 text-foreground" strokeWidth={1.5} />
-              <span className="font-heading text-xs text-muted-foreground leading-tight">
+              <span className="font-display text-xs text-muted-foreground leading-tight">
                 180-Day Money-<br />Back Guarantee
               </span>
             </div>
@@ -189,7 +189,7 @@ const ProductPurchaseSection = () => {
           {/* Selling fast banner */}
           <div className="bg-orange-50 border border-orange-200 rounded-xl px-4 py-3 flex items-center justify-center gap-2">
             <Flame className="w-5 h-5 text-orange-500" />
-            <span className="font-heading text-sm text-foreground">
+            <span className="font-display text-sm text-foreground">
               Selling fast — <span className="font-semibold">363 orders in the last 24 hours!</span>
             </span>
           </div>
