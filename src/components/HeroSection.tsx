@@ -167,7 +167,7 @@ const HeroSection = () => {
             </h1>
 
             {/* Subheadline */}
-            <p className="font-display text-base lg:text-lg text-black font-medium leading-relaxed mb-4 max-w-lg">
+            <p className="font-display text-black font-medium leading-relaxed mb-4 max-w-lg" style={{ fontSize: "20px" }}>
               One small dab. 60 seconds. Hours of relief. Non-greasy, no smell, no mess.
             </p>
 
@@ -182,7 +182,7 @@ const HeroSection = () => {
                   <span className="flex-shrink-0 w-5 h-5 rounded-full bg-primary/10 flex items-center justify-center mt-0.5">
                     <Check className="w-3 h-3 text-primary" />
                   </span>
-                  <span className="font-display text-black font-medium text-base">{point}</span>
+                  <span className="font-display text-black font-medium" style={{ fontSize: "18px" }}>{point}</span>
                 </li>
               ))}
             </ul>
