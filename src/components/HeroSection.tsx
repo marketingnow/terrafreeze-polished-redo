@@ -167,7 +167,7 @@ const HeroSection = () => {
             </h1>
 
             {/* Subheadline */}
-            <p className="font-heading text-base lg:text-lg text-black font-medium leading-relaxed mb-4 max-w-lg">
+            <p className="font-display text-base lg:text-lg text-black font-medium leading-relaxed mb-4 max-w-lg">
               One small dab. 60 seconds. Hours of relief. Non-greasy, no smell, no mess.
             </p>
 
