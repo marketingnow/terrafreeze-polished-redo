@@ -134,7 +134,7 @@ const HeroSection = () => {
             </span>
           </div>
 
-          <h1 className="font-heading text-3xl sm:text-4xl font-bold text-foreground leading-[1.1]">
+          <h1 className="font-display text-3xl sm:text-4xl font-medium text-foreground leading-[1.1]">
             Finally Move Without Pain —{" "}
             <span className="gradient-text">
               Without Pills, Prescriptions, or Doctor Visits
