@@ -203,19 +203,6 @@ const HeroSection = () => {
           {/* Right Content - Product Image */}
           <div className="order-1 lg:order-2 relative">
             <div className="relative mx-auto max-w-sm lg:max-w-md">
-              {/* Floating testimonial - desktop only */}
-              <div className="hidden lg:block absolute -top-2 -left-2 lg:-left-6 z-20 glass-card rounded-lg p-3 max-w-[220px] animate-float">
-                <div className="flex items-center gap-0.5 mb-1.5">
-                  {[...Array(5)].map((_, i) => (
-                    <Star key={i} strokeWidth={0} className="w-3.5 h-3.5 fill-amber-500 text-amber-500" />
-                  ))}
-                </div>
-                <p className="font-heading text-xs text-foreground leading-snug italic">
-                  "Finally something that works on my knees without burning."
-                </p>
-                <p className="font-heading text-[10px] text-muted-foreground mt-1.5">— Verified Customer</p>
-              </div>
-
               {/* Product glass container */}
               <div
                 className="relative rounded-2xl p-6 lg:p-8"
@@ -229,6 +216,19 @@ const HeroSection = () => {
                   alt="TerraFreeze Extra Strength Pain Relief Cream"
                   className="w-full h-auto object-contain drop-shadow-xl transform hover:scale-105 transition-transform duration-500"
                 />
+              </div>
+
+              {/* Floating testimonial - desktop only, overlapping bottom */}
+              <div className="hidden lg:block absolute -bottom-6 -left-6 z-20 glass-card rounded-lg p-3 max-w-[220px] animate-float">
+                <div className="flex items-center gap-0.5 mb-1.5">
+                  {[...Array(5)].map((_, i) => (
+                    <Star key={i} strokeWidth={0} className="w-3.5 h-3.5 fill-amber-500 text-amber-500" />
+                  ))}
+                </div>
+                <p className="font-heading text-xs text-foreground leading-snug italic">
+                  "Finally something that works on my knees without burning."
+                </p>
+                <p className="font-heading text-[10px] text-muted-foreground mt-1.5">— Verified Customer</p>
               </div>
 
             </div>
