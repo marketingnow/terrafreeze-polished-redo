@@ -83,14 +83,14 @@ const ProductPurchaseSection = () => {
 
           {/* Quantity Select */}
           <p className="font-display text-foreground text-xl mb-4 font-medium text-center sm:text-left">Select quantity:</p>
-          <div className="grid grid-cols-3 gap-2 sm:gap-5 mb-10 items-stretch">
+          <div className="grid grid-cols-3 gap-2 sm:gap-3 mb-10 items-stretch">
             {packages.map((pkg) => {
               const isSelected = selectedPackage === pkg.id;
               return (
-                <div key={pkg.id} className="relative pt-3 sm:pt-4">
+                <div key={pkg.id} className="relative">
                   {pkg.badge && (
                     <div
-                      className={`font-display absolute -top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 z-10 px-2.5 sm:px-4 py-1 sm:py-1.5 text-[9px] sm:text-xs font-bold tracking-wider rounded-md whitespace-nowrap shadow-sm ${
+                      className={`font-display absolute top-0 left-0 right-0 z-10 px-2 sm:px-4 py-1 sm:py-1.5 text-[9px] sm:text-xs font-bold tracking-wider rounded-t-md whitespace-nowrap text-center ${
                         pkg.badge.tone === "dark"
                           ? "bg-foreground text-background"
                           : "bg-amber-400 text-foreground"
@@ -101,7 +101,9 @@ const ProductPurchaseSection = () => {
                   )}
                   <button
                     onClick={() => setSelectedPackage(pkg.id)}
-                    className={`w-full h-full rounded-2xl border-2 p-2.5 sm:p-6 pt-4 sm:pt-7 transition-all text-center ${
+                    className={`w-full h-full rounded-md border-2 p-2.5 sm:p-6 transition-all text-center ${
+                      pkg.badge ? "pt-8 sm:pt-12" : "pt-4 sm:pt-7"
+                    } ${
                       isSelected
                         ? "border-foreground bg-orange-50/60"
                         : "border-border bg-card hover:border-foreground/40"
