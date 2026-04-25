@@ -62,7 +62,7 @@ const ProductPurchaseSection = () => {
   return (
     <section className="section-major bg-background" id="buy">
       <div className="content-container">
-        <div className="max-w-4xl mx-auto">
+        <div className="max-w-5xl mx-auto">
           {/* Title + Reviews */}
           <div className="text-center mb-10">
             <div className="flex flex-col sm:flex-row items-center justify-center gap-1 sm:gap-2 mb-4">
