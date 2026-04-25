@@ -15,7 +15,7 @@ import histamineImage from "@/assets/ingredient-histamine.jpg";
 const ingredients = [
   {
     category: "COOLING RELIEF",
-    name: "Menthol",
+    name: "Menthol 10%",
     description: "Provides immediate cooling sensation that soothes pain on contact. Creates a refreshing feeling while blocking pain signals to the brain.",
     badge: "Instant cooling action",
     image: mentholImage,
@@ -23,7 +23,7 @@ const ingredients = [
   },
   {
     category: "WARMING ACTION",
-    name: "Methyl Salicylate",
+    name: "Methyl Salicylate 10%",
     description: "Generates a warming sensation to increase blood flow and ease deep joint stiffness. Provides lasting relief that penetrates deep into muscles.",
     badge: "Improves circulation",
     image: methylImage,
@@ -126,7 +126,7 @@ const IngredientsSection = () => {
           {/* Headline */}
           <div className="text-center mb-4">
             <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground">
-              Only 6 Ingredients. Zero Fillers. <em className="text-primary">All Active.</em>
+              18 Ingredients in 1 <em className="text-primary">Powerful Formula.</em>
             </h2>
           </div>
 
