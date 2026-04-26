@@ -26,7 +26,7 @@ const steps = [
     description:
       "Menthol cools on contact while Methyl Salicylate increases blood flow to the area. Pain fades. Stiffness eases. Mobility returns.",
     image: reliefImage,
-    alt: "Active grandparent joyfully lifting grandchild in a sunny park",
+    alt: "Smiling grandfather with arms around two grandchildren in a sunny park",
   },
 ];
 
