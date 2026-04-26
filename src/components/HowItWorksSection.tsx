@@ -1,5 +1,5 @@
 import { ArrowRight } from "lucide-react";
-import applyImage from "@/assets/howitworks-apply.jpg";
+import applyImage from "@/assets/howitworks-apply.png";
 import absorbsImage from "@/assets/howitworks-absorbs.jpg";
 import reliefImage from "@/assets/howitworks-relief.jpg";
 
